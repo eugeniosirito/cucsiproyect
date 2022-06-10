@@ -1,61 +1,86 @@
+//variables
+@import url('https://fonts.googleapis.com/css2?family=Merienda+One&family=Nunito:wght@200;300;400;500;600&family=Open+Sans:wght@300;400;700&family=Oswald:wght@200;300;400&family=Roboto:wght@100&display=swap');
+
+$color-principal: #BED23C;
+$color-letra: #FFFFFF;
+$font-family-base: 'Roboto';
+
+
 .app {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 400px;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 150px auto;
+  height: 630px;
+  width: 300px;
+  background-color: #F4F4F4;
+
 }
 
-.app .field label {
-  margin: 1em;
-  font-size: 15px;
-  color: black;
+.rectangleTop {
+  height: 8px;
+  width: 300px;
+  background-color: #00ADEE;
 }
 
-.app img {
-  width: 50%;
-  margin: 1em;
-  margin-bottom: -1px;
-}
 
-.app .input {
-  border: .1rem solid #333;
-  border-radius: 5px;
-  width: 50%;
-  font-size: 15px;
+.app .woloxImg {
+  margin-left: 40px;
 }
 
 .app .sign {
-  width: 51%;
+  margin-left: 22px;
+  margin-bottom: 16px;
+  height: 35px;
+  width: 252px;
   cursor: pointer;
-  padding: 15px 25px;
-  background-color: #8fc813bf;
-  color: #FFFFFF;
+  padding: 10px 25px;
+  background-color: $color-principal;
+  color: $color-letra;
+  font-family: $font-family-base;
   font-size: 15px;
   font-weight: bold;
-  border: 1px solid #FFFFFF;
-  margin-bottom: 10px;
+  border: 1px solid $color-letra;
   border-radius: 5px;
 }
 
-.app .log {
-  width: 51%;
+.app .sign::after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 252px;
+  background-color: #A8A8A8;
+  margin-left: -25px;
+  margin-top: 25px;
+}
+
+.app .login {
+  margin-left: 22px;
+  margin-top: 16px;
+  height: 35px;
+  width: 252px;
   cursor: pointer;
-  padding: 15px 25px;
-  color: #8fc813bf;
-  background-color: #FFFFFF;
+  padding: 10px 25px;
+  color: $color-principal;
+  background-color: $color-letra;
+  font-family: $font-family-base;
   font-size: 15px;
   font-weight: bold;
-  border: 1px solid #8fc813bf;
-  margin-top: 10px;
+  border: 1px solid $color-principal;
   border-radius: 5px;
 }
 
-.app hr {
-  margin: 0 100px;
+/* .app .rectangleBot {
+  height: 2px;
+  width: 252px;
+  background-color: #A8A8A8;
+  margin-left: 22px;
+} */
+
+.app .sign:hover {
+  opacity: 0.7;
 }
 
-.app button:hover {
-  opacity: .7;
+.app .login:hover {
+  opacity: 0.7;
 }

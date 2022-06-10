@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda+One&family=Nunito:wght@200;300;400;500;600&family=Open+Sans:wght@300;400;700&family=Oswald:wght@200;300;400&family=Roboto:wght@100&display=swap');
+$font-family-base: 'Roboto';
+
+.input {
+    border-radius: 5px;
+    font-size: 15px;
+    margin-left: 22px;
+    width: 252px;
+    height: 32px;
+    font-family: $font-family-base;
+}
+
+.field .nombre {
+    margin: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+    margin-left: 22px;
+    font-family: $font-family-base;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+    margin-left: 22px;
+    font-family: $font-family-base;
+    margin-top: 5px;
+}

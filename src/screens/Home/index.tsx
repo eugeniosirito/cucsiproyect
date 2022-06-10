@@ -1,24 +1,14 @@
 import React, { useState } from 'react';
+import { useForm } from 'react-hook-form';
+import i18next from 'i18next';
+
+import Input from 'components/Input';
+import defaultFormData from 'constants/constants';
 
 import wolox from './assets/wolox.png';
 import styles from './styles.module.scss';
 
 function Home() {
-  type Usuario = {
-    nombre: string;
-    apellido: string;
-    email: string;
-    password: string;
-    confPass: string;
-  };
-  const defaultFormData: Usuario = {
-    nombre: '',
-    apellido: '',
-    email: '',
-    password: '',
-    confPass: ''
-  };
-
   const [formData, setFormData] = useState(defaultFormData);
   const { nombre, apellido, email, password, confPass } = formData;
 
@@ -28,83 +18,112 @@ function Home() {
       [e.target.id]: e.target.value
     }));
 
-  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+  const onSubmit = () => {
     const user = { nombre, apellido, email, password, confPass };
     console.log(user);
     setFormData(defaultFormData);
   };
 
+  const { register, errors, handleSubmit } = useForm();
+
   return (
-    <div className={styles.app}>
-      <form onSubmit={onSubmit}>
-        <img src={wolox} alt="" />
+    <>
+      <div className={styles.app}>
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <span className={styles.rectangleTop} />
+          <img src={wolox} alt="" className={styles.woloxImg} />
 
-        <div className={styles.field}>
-          <label htmlFor="nombre" className={styles.nombre}>
-            Nombre
-          </label>
-          <br />
-          <input type="text" id="nombre" className={styles.input} value={nombre} onChange={onChange} />
-          <br />
-        </div>
-
-        <div className={styles.field}>
-          <label htmlFor="apellido" className={styles.apellido}>
-            Apellido
-          </label>
-          <br />
-          <input type="text" id="apellido" className={styles.input} value={apellido} onChange={onChange} />
-          <br />
-        </div>
-
-        <div className={styles.field}>
-          <label htmlFor="email" className={styles.email}>
-            Email
-          </label>
-          <br />
-          <input type="mail" id="email" className={styles.input} value={email} onChange={onChange} />
-          <br />
-        </div>
-
-        <div className={styles.field}>
-          <label htmlFor="password" className={styles.password}>
-            Password
-          </label>
-          <br />
-          <input
-            type="password"
-            id="password"
-            className={styles.input}
-            value={password}
+          <Input
+            label={i18next.t('LogIn:nameInput')}
+            name="nombre"
+            id="nombre"
+            value={nombre}
+            errors={errors?.nombre?.message}
             onChange={onChange}
+            register={register({
+              required: { value: true, message: 'Nombre obligatorio' }
+            })}
           />
-          <br />
-        </div>
 
-        <div className={styles.field}>
-          <label htmlFor="confPass" className={styles.confPass}>
-            Confirmación de Password
-          </label>
+          <Input
+            label={i18next.t('LogIn:surnameInput')}
+            name="apellido"
+            id="apellido"
+            value={apellido}
+            errors={errors?.apellido?.message}
+            onChange={onChange}
+            register={register({
+              required: { value: true, message: 'Apellido obligatorio' }
+            })}
+          />
+
+          <Input
+            label={i18next.t('LogIn:emailInput')}
+            name="email"
+            id="email"
+            value={email}
+            errors={errors?.email?.message}
+            onChange={onChange}
+            register={register({
+              required: { value: true, message: 'Email obligatorio' }
+            })}
+          />
+
+          <Input
+            label={i18next.t('LogIn:passwordInput')}
+            name="password"
+            id="password"
+            type="password"
+            value={password}
+            errors={errors?.password?.message}
+            onChange={onChange}
+            register={register({
+              required: { value: true, message: 'Password obligatorio' }
+            })}
+          />
+
+          <Input
+            label={i18next.t('LogIn:confPasswordInput')}
+            name="password2"
+            id="confPass"
+            type="password"
+            value={confPass}
+            errors={errors?.password2?.message}
+            onChange={onChange}
+            register={register({
+              required: { value: true, message: 'Confirmacion de password obligatorio' }
+            })}
+          />
+
+          {/* <div className={styles.field}>
+          <label className={styles.confPass}>{i18next.t('LogIn:confPasswordInput')}</label>
           <br />
           <input
+            name="password2"
             type="password"
             id="confPass"
             className={styles.input}
             value={confPass}
             onChange={onChange}
+            ref={register({
+              required: { value: true, message: 'Password obligatorio' }
+            })}
           />
-        </div>
-        <br />
-        <button type="submit" className={styles.sign}>
-          Sign Up
-        </button>
-        <hr />
-        <button type="submit" className={styles.log}>
-          Login
-        </button>
-      </form>
-    </div>
+          <span>{errors?.password2?.message}</span>
+        </div> */}
+
+          <button type="submit" className={styles.sign}>
+            Sign Up
+          </button>
+
+          <div className={styles.rectangleBot} />
+
+          <button type="submit" className={styles.login}>
+            Login
+          </button>
+        </form>
+      </div>
+    </>
   );
 }
 
