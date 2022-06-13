@@ -20,9 +20,6 @@ function Home() {
           <span className={styles.rectangleTop} />
           <img src={wolox} alt="" className={styles.woloxImg} />
 
-          {/*     <input placeholder="Nombre" name="nombre" id="nombre" ref={register()} />
-          <input placeholder="Apellido" name="apellido" id="apellido" ref={register()} /> */}
-
           <Input
             label={i18next.t('LogIn:nameInput')}
             name={INPUT_NAMES.nombre}
