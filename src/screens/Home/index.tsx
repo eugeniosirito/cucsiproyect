@@ -1,30 +1,17 @@
-import React, { useState } from 'react';
-import { useForm } from 'react-hook-form';
+import React from 'react';
+import { SubmitHandler, useForm } from 'react-hook-form';
 import i18next from 'i18next';
 
 import Input from 'components/Input';
-import defaultFormData from 'constants/constants';
+import { INPUT_NAMES } from 'constants/constantsInput';
+import { Usuario } from 'utils/UsersTypes';
 
 import wolox from './assets/wolox.png';
 import styles from './styles.module.scss';
 
 function Home() {
-  const [formData, setFormData] = useState(defaultFormData);
-  const { nombre, apellido, email, password, confPass } = formData;
-
-  const onChange = (e: React.ChangeEvent<HTMLInputElement>) =>
-    setFormData(prevState => ({
-      ...prevState,
-      [e.target.id]: e.target.value
-    }));
-
-  const onSubmit = () => {
-    const user = { nombre, apellido, email, password, confPass };
-    console.log(user);
-    setFormData(defaultFormData);
-  };
-
-  const { register, errors, handleSubmit } = useForm();
+  const { register, handleSubmit, errors } = useForm<Usuario>();
+  const onSubmit: SubmitHandler<Usuario> = formData => console.log(formData);
 
   return (
     <>
@@ -33,13 +20,14 @@ function Home() {
           <span className={styles.rectangleTop} />
           <img src={wolox} alt="" className={styles.woloxImg} />
 
+          {/*     <input placeholder="Nombre" name="nombre" id="nombre" ref={register()} />
+          <input placeholder="Apellido" name="apellido" id="apellido" ref={register()} /> */}
+
           <Input
             label={i18next.t('LogIn:nameInput')}
-            name="nombre"
-            id="nombre"
-            value={nombre}
+            name={INPUT_NAMES.nombre}
+            id={INPUT_NAMES.nombre}
             errors={errors?.nombre?.message}
-            onChange={onChange}
             register={register({
               required: { value: true, message: 'Nombre obligatorio' }
             })}
@@ -47,11 +35,9 @@ function Home() {
 
           <Input
             label={i18next.t('LogIn:surnameInput')}
-            name="apellido"
-            id="apellido"
-            value={apellido}
+            name={INPUT_NAMES.apellido}
+            id={INPUT_NAMES.apellido}
             errors={errors?.apellido?.message}
-            onChange={onChange}
             register={register({
               required: { value: true, message: 'Apellido obligatorio' }
             })}
@@ -59,11 +45,9 @@ function Home() {
 
           <Input
             label={i18next.t('LogIn:emailInput')}
-            name="email"
-            id="email"
-            value={email}
+            name={INPUT_NAMES.email}
+            id={INPUT_NAMES.email}
             errors={errors?.email?.message}
-            onChange={onChange}
             register={register({
               required: { value: true, message: 'Email obligatorio' }
             })}
@@ -71,12 +55,10 @@ function Home() {
 
           <Input
             label={i18next.t('LogIn:passwordInput')}
-            name="password"
-            id="password"
+            name={INPUT_NAMES.password}
+            id={INPUT_NAMES.password}
             type="password"
-            value={password}
             errors={errors?.password?.message}
-            onChange={onChange}
             register={register({
               required: { value: true, message: 'Password obligatorio' }
             })}
@@ -84,42 +66,22 @@ function Home() {
 
           <Input
             label={i18next.t('LogIn:confPasswordInput')}
-            name="password2"
-            id="confPass"
+            name={INPUT_NAMES.confPass}
+            id={INPUT_NAMES.confPass}
             type="password"
-            value={confPass}
-            errors={errors?.password2?.message}
-            onChange={onChange}
+            errors={errors?.confPass?.message}
             register={register({
               required: { value: true, message: 'Confirmacion de password obligatorio' }
             })}
           />
-
-          {/* <div className={styles.field}>
-          <label className={styles.confPass}>{i18next.t('LogIn:confPasswordInput')}</label>
-          <br />
-          <input
-            name="password2"
-            type="password"
-            id="confPass"
-            className={styles.input}
-            value={confPass}
-            onChange={onChange}
-            ref={register({
-              required: { value: true, message: 'Password obligatorio' }
-            })}
-          />
-          <span>{errors?.password2?.message}</span>
-        </div> */}
-
           <button type="submit" className={styles.sign}>
-            Sign Up
+            {i18next.t('LogIn:signUp')}
           </button>
 
           <div className={styles.rectangleBot} />
 
           <button type="submit" className={styles.login}>
-            Login
+            {i18next.t('LogIn:logIn')}
           </button>
         </form>
       </div>

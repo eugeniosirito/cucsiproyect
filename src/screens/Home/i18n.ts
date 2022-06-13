@@ -5,5 +5,7 @@ i18next.addResources('es', 'LogIn', {
   surnameInput: 'Apellido',
   emailInput: 'Email',
   passwordInput: 'Password',
-  confPasswordInput: 'Confirmación de Password'
+  confPasswordInput: 'Confirmación de Password',
+  signUp: 'Sign up',
+  logIn: 'Login'
 });
