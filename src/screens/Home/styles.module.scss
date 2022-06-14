@@ -1,5 +1,5 @@
 // variables
-@import '../../scss/variables/loginVariables.scss';
+@import '../../scss/variables/globalVariables.scss';
 
 .app {
   display: flex;
@@ -53,6 +53,7 @@
 .app .login {
   margin-left: 22px;
   margin-top: 16px;
+  margin-bottom: 10px;
   height: 35px;
   width: 252px;
   cursor: pointer;

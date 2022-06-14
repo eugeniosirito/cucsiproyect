@@ -1,9 +1,10 @@
+/* eslint-disable @typescript-eslint/naming-convention */
 import { Usuario } from 'utils/UsersTypes';
 
 export const INPUT_NAMES: Usuario = {
-  nombre: 'nombre',
-  apellido: 'apellido',
+  first_name: 'first_name',
+  last_name: 'last_name',
   email: 'email',
   password: 'password',
-  confPass: 'confPass'
+  password_confirmation: 'password_confirmation'
 };

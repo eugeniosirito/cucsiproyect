@@ -1,7 +1,8 @@
+/* eslint-disable @typescript-eslint/naming-convention */
 export type Usuario = {
-  nombre: string;
-  apellido: string;
+  first_name: string;
+  last_name: string;
   email: string;
   password: string;
-  confPass: string;
+  password_confirmation: string;
 };

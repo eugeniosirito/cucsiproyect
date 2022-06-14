@@ -5,13 +5,22 @@ import i18next from 'i18next';
 import Input from 'components/Input';
 import { INPUT_NAMES } from 'constants/constantsInput';
 import { Usuario } from 'utils/UsersTypes';
+import { signUp } from 'services/AuthService';
 
 import wolox from './assets/wolox.png';
 import styles from './styles.module.scss';
 
 function Home() {
   const { register, handleSubmit, errors } = useForm<Usuario>();
-  const onSubmit: SubmitHandler<Usuario> = formData => console.log(formData);
+
+  const onSubmit: SubmitHandler<Usuario> = formData => {
+    console.log(formData);
+    signUp(formData)
+      .then(result => {
+        console.log(result);
+      })
+      .catch(console.log);
+  };
 
   return (
     <>
@@ -22,21 +31,21 @@ function Home() {
 
           <Input
             label={i18next.t('LogIn:nameInput')}
-            name={INPUT_NAMES.nombre}
-            id={INPUT_NAMES.nombre}
-            errors={errors?.nombre?.message}
+            name={INPUT_NAMES.first_name}
+            id={INPUT_NAMES.first_name}
+            errors={errors?.first_name?.message}
             register={register({
-              required: { value: true, message: 'Nombre obligatorio' }
+              required: { value: true, message: i18next.t('LogIn:nameError') }
             })}
           />
 
           <Input
             label={i18next.t('LogIn:surnameInput')}
-            name={INPUT_NAMES.apellido}
-            id={INPUT_NAMES.apellido}
-            errors={errors?.apellido?.message}
+            name={INPUT_NAMES.last_name}
+            id={INPUT_NAMES.last_name}
+            errors={errors?.last_name?.message}
             register={register({
-              required: { value: true, message: 'Apellido obligatorio' }
+              required: { value: true, message: i18next.t('LogIn:surnameError') }
             })}
           />
 
@@ -46,7 +55,7 @@ function Home() {
             id={INPUT_NAMES.email}
             errors={errors?.email?.message}
             register={register({
-              required: { value: true, message: 'Email obligatorio' }
+              required: { value: true, message: i18next.t('LogIn:emailError') }
             })}
           />
 
@@ -57,18 +66,18 @@ function Home() {
             type="password"
             errors={errors?.password?.message}
             register={register({
-              required: { value: true, message: 'Password obligatorio' }
+              required: { value: true, message: i18next.t('LogIn:passwordError') }
             })}
           />
 
           <Input
             label={i18next.t('LogIn:confPasswordInput')}
-            name={INPUT_NAMES.confPass}
-            id={INPUT_NAMES.confPass}
+            name={INPUT_NAMES.password_confirmation}
+            id={INPUT_NAMES.password_confirmation}
             type="password"
-            errors={errors?.confPass?.message}
+            errors={errors?.password_confirmation?.message}
             register={register({
-              required: { value: true, message: 'Confirmacion de password obligatorio' }
+              required: { value: true, message: i18next.t('LogIn:confPasswordError') }
             })}
           />
           <button type="submit" className={styles.sign}>
