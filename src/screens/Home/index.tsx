@@ -3,7 +3,7 @@ import { SubmitHandler, useForm } from 'react-hook-form';
 import i18next from 'i18next';
 
 import Input from 'components/Input';
-import { INPUT_NAMES } from 'constants/constantsInput';
+import { INPUT_NAMES } from 'constants/constantsUser';
 import { Usuario } from 'utils/UsersTypes';
 import { signUp } from 'services/AuthService';
 
