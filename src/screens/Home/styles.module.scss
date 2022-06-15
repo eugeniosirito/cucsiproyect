@@ -19,7 +19,9 @@
 }
 
 .rectangleTop {
-  margin-bottom: 10px;
+  position: absolute;
+  top: 143px;
+  margin-bottom: 30px;
   height: 8px;
   width: 300px;
   background-color: $vivid-cerulean;
