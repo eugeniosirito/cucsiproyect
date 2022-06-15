@@ -18,7 +18,7 @@ function Input({ label, name, id, register, errors, type = 'text' }: Props) {
       <br />
       <input placeholder={label} name={name} type={type} id={id} className={styles.input} ref={register} />
       <br />
-      <span className={styles.error}>{errors}</span>
+      <span className={styles.requiredInput}>{errors}</span>
     </div>
   );
 }

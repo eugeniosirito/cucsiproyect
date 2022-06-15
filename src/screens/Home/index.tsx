@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import i18next from 'i18next';
 
@@ -12,14 +12,18 @@ import styles from './styles.module.scss';
 
 function Home() {
   const { register, handleSubmit, errors } = useForm<Usuario>();
+  const [error, setError] = useState(null);
 
   const onSubmit: SubmitHandler<Usuario> = formData => {
-    console.log(formData);
     signUp(formData)
-      .then(result => {
-        console.log(result);
+      .then(res => {
+        if (!res.ok) {
+          throw Error('Invalid input information');
+        }
       })
-      .catch(console.log);
+      .catch(err => {
+        setError(err.message);
+      });
   };
 
   return (
@@ -86,6 +90,7 @@ function Home() {
         <button type="submit" className={styles.login}>
           {i18next.t('LogIn:logIn')}
         </button>
+        {error && <div className={styles.invalidInput}>{error}</div>}
       </form>
     </div>
   );
