@@ -1,27 +1,23 @@
 @import '../../scss/variables/globalVariables.scss';
 
-.input {
-    border-radius: 5px;
-    font-size: 15px;
-    margin-left: 22px;
-    width: 252px;
-    height: 32px;
+.field .nombre,
+.input,
+.requiredInput {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
     font-family: $font-family-base;
+    margin-left: 22px;
+    margin-bottom: 10.5px;
+    width: 252px;
 }
 
-.field .nombre {
-    margin: 10px;
-    font-size: 16px;
-    font-weight: 800;
-    color: black;
-    margin-left: 22px;
-    font-family: $font-family-base;
+.input {
+    height: 32px;
+    border-radius: 5px;
 }
 
 .requiredInput {
     color: $errors;
-    font-weight: bold;
-    margin-left: 22px;
-    font-family: $font-family-base;
-    margin-top: 5px;
 }
