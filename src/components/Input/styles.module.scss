@@ -2,7 +2,7 @@
 
 .field .nombre,
 .input,
-.requiredInput {
+.required-Input {
     display: block;
     font-size: 16px;
     font-weight: bold;
@@ -18,6 +18,6 @@
     border-radius: 5px;
 }
 
-.requiredInput {
+.required-Input {
     color: $errors;
 }
