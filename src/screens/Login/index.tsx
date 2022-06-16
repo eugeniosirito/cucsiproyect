@@ -4,6 +4,7 @@ import { SubmitHandler, useForm } from 'react-hook-form';
 import i18next from 'i18next';
 
 import { PATH_NAMES } from 'constants/constantsPaths';
+import { CREDENTIALS } from 'constants/constantsCredentials';
 import Input from 'components/Input';
 import { INPUT_NAMES } from 'constants/constantsUser';
 import { Usuario } from 'utils/UsersTypes';
@@ -22,8 +23,12 @@ function Login() {
         if (!res.ok) {
           throw Error('Credenciales Invalidas');
         }
-        console.log(res.headers);
-        console.log(res);
+        if (res.headers) {
+          console.log(res.headers?.client);
+          console.log(res.headers?.uid);
+          console.log(res.headers[CREDENTIALS.token]);
+          console.log(res);
+        }
       })
       .catch(err => {
         setError(err.message);
