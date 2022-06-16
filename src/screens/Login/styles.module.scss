@@ -70,8 +70,13 @@
     font-family: $font-family-base;
     font-size: 15px;
     font-weight: bold;
-    border: 1px solid $main-color-grunervetliner;
+    border: 2px solid $main-color-grunervetliner;
     border-radius: 5px;
+}
+
+.sign-Up-Btn {
+    margin-left: 76px;
+    color: $main-color-grunervetliner;
 }
 
 .app .sign:hover,

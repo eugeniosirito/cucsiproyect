@@ -24,8 +24,8 @@ function Login() {
           throw Error('Credenciales Invalidas');
         }
         if (res.headers) {
-          console.log(res.headers?.client);
-          console.log(res.headers?.uid);
+          console.log(res.headers.client);
+          console.log(res.headers.uid);
           console.log(res.headers[CREDENTIALS.token]);
           console.log(res);
         }
@@ -67,13 +67,11 @@ function Login() {
         />
 
         <button type="submit" className={styles.sign}>
-          {i18next.t('LogIn:signUp')}
+          {i18next.t('LogIn:logIn')}
         </button>
 
-        <Link to={PATH_NAMES.signup}>
-          <button type="submit" className={styles.login}>
-            {i18next.t('LogIn:logIn')}
-          </button>
+        <Link to={PATH_NAMES.signup} className={styles.login}>
+          <span className={styles.signUpBtn}>{i18next.t('LogIn:signUp')}</span>
         </Link>
         {error && <div className={styles.invalidInput}>{error}</div>}
       </form>
