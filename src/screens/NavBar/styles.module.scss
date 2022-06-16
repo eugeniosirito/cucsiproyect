@@ -1,0 +1,30 @@
+@import '../../scss/variables/globalVariables.scss';
+
+.container {
+    margin: auto;
+    box-shadow: 0px 0px 15px;
+}
+
+.nav-bar {
+    float: right;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-right: 246px;
+    margin-top: 26px;
+}
+
+.log-Out {
+    font-size: 18px;
+    font-family: $font-family-base;
+}
+
+.rectangle-Top {
+    height: 8px;
+    background-color: $vivid-cerulean;
+}
+
+
+.wolox-Img {
+    margin-left: 246px;
+}

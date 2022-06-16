@@ -24,10 +24,7 @@ function Login() {
           throw Error('Credenciales Invalidas');
         }
         if (res.headers) {
-          console.log(res.headers?.client);
-          console.log(res.headers?.uid);
-          console.log(res.headers[CREDENTIALS.token]);
-          console.log(res);
+          window.localStorage.setItem('logged', JSON.stringify(res.headers[CREDENTIALS.token]));
         }
       })
       .catch(err => {
