@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router';
 import { Link } from 'react-router-dom';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import i18next from 'i18next';
@@ -16,6 +17,7 @@ import wolox from './assets/wolox.png';
 function Login() {
   const { register, handleSubmit, errors } = useForm<Usuario>();
   const [error, setError] = useState(null);
+  const navigate = useNavigate();
 
   const onSubmit: SubmitHandler<Usuario> = formData => {
     login(formData)
@@ -25,6 +27,7 @@ function Login() {
         }
         if (res.headers) {
           window.localStorage.setItem('logged', JSON.stringify(res.headers[CREDENTIALS.token]));
+          navigate('/');
         }
       })
       .catch(err => {
@@ -64,13 +67,11 @@ function Login() {
         />
 
         <button type="submit" className={styles.sign}>
-          {i18next.t('LogIn:signUp')}
+          {i18next.t('LogIn:logIn')}
         </button>
 
-        <Link to={PATH_NAMES.signup}>
-          <button type="submit" className={styles.login}>
-            {i18next.t('LogIn:logIn')}
-          </button>
+        <Link to={PATH_NAMES.signup} className={styles.login}>
+          <span className={styles.signUpBtn}>{i18next.t('LogIn:signUp')}</span>
         </Link>
         {error && <div className={styles.invalidInput}>{error}</div>}
       </form>
