@@ -1,0 +1,23 @@
+@import '../../scss/variables/globalVariables.scss';
+
+.field .nombre,
+.input,
+.required-Input {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    font-family: $font-family-base;
+    margin-left: 22px;
+    margin-bottom: 10.5px;
+    width: 252px;
+}
+
+.input {
+    height: 32px;
+    border-radius: 5px;
+}
+
+.required-Input {
+    color: $errors;
+}

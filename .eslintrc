@@ -4,5 +4,10 @@
       "react": {
       "version": "detect"
     }
+  },
+
+  /* probar en la mac */
+  "rules":{
+    "linebreak-style": ["error", "windows"]
   }
 }

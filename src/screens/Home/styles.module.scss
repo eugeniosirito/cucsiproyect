@@ -1,40 +1,79 @@
+// variables
+@import '../../scss/variables/globalVariables.scss';
+
 .app {
-  text-align: center;
-}
-
-.app-logo {
-  animation: app-logo-spin infinite 20s linear;
-  height: 40vmin;
-  margin-bottom: 40px;
-}
-
-.app-header {
-  background-color: #282C34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  margin: 150px auto;
+  height: 650px;
+  width: 300px;
+  background-color: $main-bgc-color-lighthouse;
 }
 
-.text {
-  font-size: calc(10px + 2vmin);
-  margin-bottom: calc(30px + 2vmin);
-  color: #FFF;
+.invalid-Input {
+  text-align: center;
+  color: $errors;
+  font-weight: bold;
 }
 
-.app-link {
-  font-size: calc(10px + 2vmin);
-  color: #61DAFB;
-  text-decoration: underline;
+.rectangleTop {
+  position: absolute;
+  top: 143px;
+  margin-bottom: 30px;
+  height: 8px;
+  width: 300px;
+  background-color: $vivid-cerulean;
 }
 
-@keyframes app-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
 
-  to {
-    transform: rotate(360deg);
-  }
+.app .wolox-Img {
+  margin-left: 40px;
+}
+
+.app .sign {
+  margin-left: 22px;
+  margin-bottom: 16px;
+  height: 35px;
+  width: 252px;
+  cursor: pointer;
+  padding: 10px 25px;
+  background-color: $main-color-grunervetliner;
+  color: $font-color-white;
+  font-family: $font-family-base;
+  font-size: 15px;
+  font-weight: bold;
+  border: 1px solid $font-color-white;
+  border-radius: 5px;
+}
+
+.app .sign::after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 252px;
+  background-color: $uniform-grey;
+  margin-left: -25px;
+  margin-top: 25px;
+}
+
+.app .login {
+  margin-left: 22px;
+  margin-top: 16px;
+  margin-bottom: 10px;
+  height: 35px;
+  width: 252px;
+  cursor: pointer;
+  padding: 10px 25px;
+  color: $main-color-grunervetliner;
+  background-color: $font-color-white;
+  font-family: $font-family-base;
+  font-size: 15px;
+  font-weight: bold;
+  border: 1px solid $main-color-grunervetliner;
+  border-radius: 5px;
+}
+
+.app .sign:hover,
+.login:hover {
+  opacity: 0.7;
 }
