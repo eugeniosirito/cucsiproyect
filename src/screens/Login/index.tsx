@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useMutation } from 'react-query';
-import { Link, Redirect } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import i18next from 'i18next';
 import { ApiResponse } from 'apisauce';
@@ -38,7 +38,7 @@ function Login() {
   );
   const onSubmit: SubmitHandler<Usuario> = formData => mutate(formData);
   if (isSuccess) {
-    return <Redirect to={PATH_NAMES.navBar} />;
+    return <Navigate to={PATH_NAMES.navBar} />;
   }
 
   return (
