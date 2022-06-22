@@ -1,0 +1,43 @@
+@import '../../scss/variables/globalVariables.scss';
+
+.img-container {
+    width: 73%;
+    margin: auto;
+    display: grid;
+    padding: 40px 0;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.portada {
+    height: 100%;
+    margin: auto;
+    display: flex;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    border-radius: 4%;
+    height: 200px;
+    width: 142px;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.title {
+    color: #000;
+    font-size: 16px;
+    font-family: $font-family-base;
+    font-weight: 600;
+}
+
+.author {
+    color: #828282;
+    font-size: 14px;
+    font-family: $font-family-base;
+    line-height: 18px;
+}
