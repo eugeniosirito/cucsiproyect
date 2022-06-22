@@ -17,7 +17,6 @@ function BookList() {
 
   const fetchLibros = () => {
     getBooks(headers).then(response => {
-      console.log(response);
       const data = response.data as any;
       setLibros(data.page as Libro[]);
     });

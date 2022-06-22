@@ -41,10 +41,8 @@ function Login() {
   );
   const onSubmit: SubmitHandler<Usuario> = formData => mutate(formData);
   if (isSuccess) {
-    console.log(isSuccess, 'hola');
     return <Navigate to={PATH_NAMES.navBar} />;
   }
-  console.log(isSuccess);
 
   return (
     <div className={styles.app}>
