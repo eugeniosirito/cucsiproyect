@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useMutation } from 'react-query';
-import { Link, Redirect } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import i18next from 'i18next';
 import { ApiResponse } from 'apisauce';
@@ -11,6 +11,7 @@ import Input from 'components/Input';
 import { INPUT_NAMES } from 'constants/constantsUser';
 import { Usuario } from 'utils/UsersTypes';
 import { login } from 'services/LoginService';
+import LocalStorageService from 'services/LocalStorageService';
 
 import styles from './styles.module.scss';
 import wolox from './assets/wolox.png';
@@ -28,7 +29,7 @@ function Login() {
           throw Error('Credenciales Invalidas');
         }
         if (response.headers) {
-          window.localStorage.setItem('logged', JSON.stringify(response.headers[CREDENTIALS.token]));
+          LocalStorageService.setValue('logged', JSON.stringify(response.headers[CREDENTIALS.token]));
         }
       },
       onError: err => {
@@ -38,7 +39,7 @@ function Login() {
   );
   const onSubmit: SubmitHandler<Usuario> = formData => mutate(formData);
   if (isSuccess) {
-    return <Redirect to={PATH_NAMES.navBar} />;
+    return <Navigate to={PATH_NAMES.navBar} />;
   }
 
   return (
@@ -73,7 +74,7 @@ function Login() {
         />
 
         <button type="submit" className={styles.sign}>
-          {isLoading ? 'Cargando' : i18next.t('LogIn:logIn')}
+          {isLoading ? i18next.t('LogIn:cargando') : i18next.t('LogIn:logIn')}
         </button>
 
         <Link to={PATH_NAMES.signup} className={styles.login}>
