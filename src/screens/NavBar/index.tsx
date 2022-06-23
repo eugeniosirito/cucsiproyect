@@ -22,7 +22,7 @@ function NavBar() {
       <div className={styles.rectangleTop} />
       <img src={wolox} alt="" className={styles.woloxImg} />
       <div className={styles.navBar}>
-        <button type="submit" onClick={deleteToken} className={styles.logOut}>
+        <button type="button" onClick={deleteToken} className={styles.logOut}>
           {i18next.t('LogIn:logOut')}
         </button>
       </div>
