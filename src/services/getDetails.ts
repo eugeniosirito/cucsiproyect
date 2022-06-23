@@ -8,13 +8,9 @@ interface Headers {
   id: string | undefined;
 }
 
-interface BookResponse {
-  page: Libro;
-}
-
 export const getDetails = (headers: Headers) => {
   const { token, uid, client, id } = headers;
-  return api.get<BookResponse>(
+  return api.get<Libro>(
     `/books/${id}`,
     {},
     {

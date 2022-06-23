@@ -17,8 +17,7 @@ function Details() {
   const client = LocalStorageService.getValue(STORAGE_KEYS.client);
   const headers = { token, uid, client, id };
 
-  const { data } = useQuery('details', () => getDetails(headers).then(response => response.data?.page));
-  console.log(data);
+  const { data } = useQuery('details', () => getDetails(headers).then(response => response.data));
 
   return (
     <div>
@@ -32,11 +31,17 @@ function Details() {
         <img src={data?.image_url} className={styles.book} />
         <div className={styles.contenido}>
           <h2 className={styles.title}>
-            {data?.title} ({data?.genre})
+            {data?.title} <p className={styles.genre}>({data?.genre})</p>
           </h2>
-          <p className={styles.text}>{`Autor del libro: ${data?.author}`}</p>
-          <p className={styles.text}>{`Editorial: ${data?.editor}`}</p>
-          <p className={styles.text}>{`Año de publicación: ${data?.year}`}</p>
+          <p className={styles.text}>
+            Autor del libro: <p className={styles.textContent}>{data?.author}</p>
+          </p>
+          <p className={styles.text}>
+            Editorial: <p className={styles.textContent}>{data?.editor}</p>
+          </p>
+          <p className={styles.text}>
+            Año de publicación: <p className={styles.textContent}>{data?.year}</p>
+          </p>
         </div>
       </div>
     </div>
