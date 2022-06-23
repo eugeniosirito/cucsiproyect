@@ -11,6 +11,7 @@ import Input from 'components/Input';
 import { INPUT_NAMES } from 'constants/constantsUser';
 import { Usuario } from 'utils/UsersTypes';
 import { login } from 'services/LoginService';
+import LocalStorageService from 'services/LocalStorageService';
 import { PATTERNS } from 'constants/constantsPatterns';
 
 import styles from './styles.module.scss';
@@ -29,7 +30,7 @@ function Login() {
           throw Error('Credenciales Invalidas');
         }
         if (response.headers) {
-          window.localStorage.setItem('logged', JSON.stringify(response.headers[CREDENTIALS.token]));
+          LocalStorageService.setValue('logged', JSON.stringify(response.headers[CREDENTIALS.token]));
         }
       },
       onError: err => {
@@ -74,7 +75,7 @@ function Login() {
         />
 
         <button type="submit" className={styles.sign}>
-          {isLoading ? 'Cargando' : i18next.t('LogIn:logIn')}
+          {isLoading ? i18next.t('LogIn:cargando') : i18next.t('LogIn:logIn')}
         </button>
 
         <Link to={PATH_NAMES.signup} className={styles.login}>
