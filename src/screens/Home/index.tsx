@@ -5,7 +5,7 @@ import i18next from 'i18next';
 import Input from 'components/Input';
 import { INPUT_NAMES } from 'constants/constantsUser';
 import { Usuario } from 'utils/UsersTypes';
-import { signUp } from 'services/AuthService';
+import { signUp } from 'services/SignupService';
 
 import wolox from './assets/wolox.png';
 import styles from './styles.module.scss';

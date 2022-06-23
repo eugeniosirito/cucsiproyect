@@ -1,1 +1,39 @@
-[{"C:\\Users\\54115\\Desktop\\React Training\\Proyecto\\es-react\\src\\screens\\Home\\index.tsx":"1","C:\\Users\\54115\\Desktop\\React Training\\Proyecto\\es-react\\src\\components\\App\\index.tsx":"2"},{"size":2999,"mtime":1655327237970,"results":"3","hashOfConfig":"4"},{"size":169,"mtime":1655388082634,"results":"5","hashOfConfig":"4"},{"filePath":"6","messages":"7","errorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0},"vfltb6",{"filePath":"8","messages":"9","errorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0},"C:\\Users\\54115\\Desktop\\React Training\\Proyecto\\es-react\\src\\screens\\Home\\index.tsx",[],"C:\\Users\\54115\\Desktop\\React Training\\Proyecto\\es-react\\src\\components\\App\\index.tsx",[]]
+[
+    {
+        "C:\\Users\\54115\\Desktop\\React Training\\Proyecto\\es-react\\src\\screens\\Home\\index.tsx": "1",
+        "C:\\Users\\54115\\Desktop\\React Training\\Proyecto\\es-react\\src\\components\\App\\index.tsx": "2"
+    },
+    {
+        "size": 2999,
+        "mtime": 1655327237970,
+        "results": "3",
+        "hashOfConfig": "4"
+    },
+    {
+        "size": 169,
+        "mtime": 1655388082634,
+        "results": "5",
+        "hashOfConfig": "4"
+    },
+    {
+        "filePath": "6",
+        "messages": "7",
+        "errorCount": 0,
+        "warningCount": 0,
+        "fixableErrorCount": 0,
+        "fixableWarningCount": 0
+    },
+    "vfltb6",
+    {
+        "filePath": "8",
+        "messages": "9",
+        "errorCount": 0,
+        "warningCount": 0,
+        "fixableErrorCount": 0,
+        "fixableWarningCount": 0
+    },
+    "C:\\Users\\54115\\Desktop\\React Training\\Proyecto\\es-react\\src\\screens\\Home\\index.tsx",
+    [],
+    "C:\\Users\\54115\\Desktop\\React Training\\Proyecto\\es-react\\src\\components\\App\\index.tsx",
+    []
+]
