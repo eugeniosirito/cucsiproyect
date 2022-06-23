@@ -13,6 +13,7 @@ import { Usuario } from 'utils/UsersTypes';
 import { login } from 'services/LoginService';
 import LocalStorageService from 'services/LocalStorageService';
 import { STORAGE_KEYS } from 'constants/constantsLocalStorage';
+import { PATTERNS } from 'constants/constantsPatterns';
 
 import styles from './styles.module.scss';
 import wolox from './assets/wolox.png';
@@ -41,7 +42,7 @@ function Login() {
   );
   const onSubmit: SubmitHandler<Usuario> = formData => mutate(formData);
   if (isSuccess) {
-    return <Navigate to={PATH_NAMES.navBar} />;
+    return <Navigate to={PATH_NAMES.navBar} replace />;
   }
 
   return (
@@ -58,7 +59,7 @@ function Login() {
           register={register({
             required: { value: true, message: i18next.t('LogIn:emailError') },
             pattern: {
-              value: /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/,
+              value: PATTERNS.email,
               message: i18next.t('LogIn:invalidEmail')
             }
           })}
@@ -76,7 +77,7 @@ function Login() {
         />
 
         <button type="submit" className={styles.sign}>
-          {isLoading ? 'Cargando' : i18next.t('LogIn:logIn')}
+          {isLoading ? i18next.t('LogIn:cargando') : i18next.t('LogIn:logIn')}
         </button>
 
         <Link to={PATH_NAMES.signup} className={styles.login}>

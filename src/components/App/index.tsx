@@ -7,7 +7,7 @@ import 'scss/application.scss';
 import Home from 'screens/Home/index';
 import Login from 'screens/Login';
 import NavBar from 'screens/NavBar';
-import PrivateRoute from 'utils/PrivateRoute';
+import PrivateRoute from 'components/PrivateRoute';
 
 const queryClient = new QueryClient();
 
