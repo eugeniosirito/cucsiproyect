@@ -8,7 +8,7 @@ import Home from 'screens/Home/index';
 import Login from 'screens/Login';
 import NavBar from 'screens/NavBar';
 import Details from 'screens/Details';
-import PrivateRoute from 'utils/PrivateRoute';
+import PrivateRoute from 'components/PrivateRoute';
 
 const queryClient = new QueryClient();
 

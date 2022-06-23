@@ -2,31 +2,31 @@
 @import '../../scss/variables/globalVariables.scss';
 
 .app {
-  display: flex;
   justify-content: center;
   align-items: center;
   margin: 150px auto;
   height: 650px;
   width: 300px;
   background-color: $main-bgc-color-lighthouse;
-
 }
 
-.invalidInput {
+.invalid-Input {
   text-align: center;
   color: $errors;
   font-weight: bold;
 }
 
 .rectangleTop {
-  margin-bottom: 10px;
+  position: absolute;
+  top: 143px;
+  margin-bottom: 30px;
   height: 8px;
   width: 300px;
   background-color: $vivid-cerulean;
 }
 
 
-.app .woloxImg {
+.app .wolox-Img {
   margin-left: 40px;
 }
 
