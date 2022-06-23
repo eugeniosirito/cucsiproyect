@@ -11,6 +11,7 @@ import Input from 'components/Input';
 import { INPUT_NAMES } from 'constants/constantsUser';
 import { Usuario } from 'utils/UsersTypes';
 import { login } from 'services/LoginService';
+import { PATTERNS } from 'constants/constantsPatterns';
 
 import styles from './styles.module.scss';
 import wolox from './assets/wolox.png';
@@ -55,7 +56,7 @@ function Login() {
           register={register({
             required: { value: true, message: i18next.t('LogIn:emailError') },
             pattern: {
-              value: /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/,
+              value: PATTERNS.email,
               message: i18next.t('LogIn:invalidEmail')
             }
           })}
