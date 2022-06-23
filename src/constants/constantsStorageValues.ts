@@ -1,3 +1,3 @@
 export const STORAGE_VALUES = {
-  tokenValue: 'access-token'
+  tokenValue: 'token'
 };
