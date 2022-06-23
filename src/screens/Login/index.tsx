@@ -38,7 +38,7 @@ function Login() {
   );
   const onSubmit: SubmitHandler<Usuario> = formData => mutate(formData);
   if (isSuccess) {
-    return <Navigate to={PATH_NAMES.navBar} />;
+    return <Navigate to={PATH_NAMES.navBar} replace />;
   }
 
   return (
