@@ -1,0 +1,51 @@
+@import '../../scss/variables/globalVariables.scss';
+
+.container {
+    padding: 24px;
+    background-color: #fff;
+    width: 900px;
+    display: flex;
+    margin: 200px auto;
+    box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+.atras-arrow {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 10%;
+    left: 26.4%;
+}
+
+.atras {
+    color: black;
+    font-family: $font-family-base;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    margin-left: 12px;
+}
+
+.book {
+    height: 368px;
+    width: 261px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+    border-radius: 3%;
+    margin-right: 52px;
+}
+
+.contenido {
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    margin-top: 24px;
+    font-size: 32px;
+
+}
+
+.text {
+    font-size: 20px;
+    margin-top: 36px;
+}

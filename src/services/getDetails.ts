@@ -5,16 +5,17 @@ interface Headers {
   token: string | null;
   uid: string | null;
   client: string | null;
+  id: string | undefined;
 }
 
 interface BookResponse {
-  page: Libro[];
+  page: Libro;
 }
 
-export const getBooks = (headers: Headers) => {
-  const { token, uid, client } = headers;
+export const getDetails = (headers: Headers) => {
+  const { token, uid, client, id } = headers;
   return api.get<BookResponse>(
-    '/books',
+    `/books/${id}`,
     {},
     {
       headers: {
