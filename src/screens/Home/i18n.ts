@@ -8,9 +8,9 @@ i18next.addResources('es', 'LogIn', {
   confPasswordInput: 'Confirmación de Password',
   signUp: 'Sign up',
   logIn: 'Login',
-  nameError: 'Nombre obligatorio',
-  surnameError: 'Apellido obligatorio',
-  emailError: 'Email obligatorio',
-  passwordError: 'Password obligatorio',
-  confPasswordError: 'Confirmacion de password obligatorio'
+  nameError: 'Nombre requerido',
+  surnameError: 'Apellido requerido',
+  emailError: 'Email requerido',
+  passwordError: 'Password requerido',
+  confPasswordError: 'Confirmacion requerida'
 });
