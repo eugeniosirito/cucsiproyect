@@ -13,6 +13,7 @@ import { Usuario } from 'utils/UsersTypes';
 import { login } from 'services/LoginService';
 import LocalStorageService from 'services/LocalStorageService';
 import { PATTERNS } from 'constants/constantsPatterns';
+import { STORAGE_VALUES } from 'constants/constantsStorageValues';
 
 import styles from './styles.module.scss';
 import wolox from './assets/wolox.png';
@@ -30,7 +31,10 @@ function Login() {
           throw Error('Credenciales Invalidas');
         }
         if (response.headers) {
-          LocalStorageService.setValue('logged', JSON.stringify(response.headers[CREDENTIALS.token]));
+          LocalStorageService.setValue(
+            STORAGE_VALUES.tokenValue,
+            JSON.stringify(response.headers[CREDENTIALS.token])
+          );
         }
       },
       onError: err => {

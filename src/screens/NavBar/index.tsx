@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 import LocalStorageService from 'services/LocalStorageService';
 import { PATH_NAMES } from 'constants/constantsPaths';
+import { STORAGE_VALUES } from 'constants/constantsStorageValues';
 
 import wolox from '../Home/assets/wolox.png';
 
@@ -12,7 +13,7 @@ import styles from './styles.module.scss';
 function NavBar() {
   const navigate = useNavigate();
   const deleteToken = () => {
-    LocalStorageService.removeValue('logged');
+    LocalStorageService.removeValue(STORAGE_VALUES.tokenValue);
     navigate(PATH_NAMES.login);
   };
 
