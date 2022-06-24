@@ -1,0 +1,44 @@
+@import '../../scss/variables/globalVariables.scss';
+@import '../../scss/variables/colors';
+
+.img-container {
+    width: 73%;
+    margin: auto;
+    display: grid;
+    padding: 40px 0;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.portada {
+    height: 100%;
+    margin: auto;
+    display: flex;
+    box-shadow: $box-shadow;
+    cursor: pointer;
+    border-radius: 4%;
+    height: 200px;
+    width: 142px;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.title {
+    color: $black;
+    font-size: 16px;
+    font-family: $font-family-base;
+    font-weight: 600;
+}
+
+.author {
+    color: $gray;
+    font-size: 14px;
+    font-family: $font-family-base;
+    line-height: 18px;
+}

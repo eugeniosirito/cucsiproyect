@@ -12,8 +12,8 @@ import { INPUT_NAMES } from 'constants/constantsUser';
 import { Usuario } from 'utils/UsersTypes';
 import { login } from 'services/LoginService';
 import LocalStorageService from 'services/LocalStorageService';
+import { STORAGE_KEYS } from 'constants/constantsLocalStorage';
 import { PATTERNS } from 'constants/constantsPatterns';
-import { STORAGE_VALUES } from 'constants/constantsStorageValues';
 
 import styles from './styles.module.scss';
 import wolox from './assets/wolox.png';
@@ -22,7 +22,6 @@ function Login() {
   const { register, handleSubmit, errors } = useForm<Usuario>();
   const [error, setError] = useState('');
 
-  /* crear interfaz con { message: string } */
   const { mutate, isSuccess, isLoading } = useMutation<ApiResponse<unknown>, { message: string }, Usuario>(
     (formData: Usuario) => login(formData),
     {
@@ -31,10 +30,9 @@ function Login() {
           throw Error('Credenciales Invalidas');
         }
         if (response.headers) {
-          LocalStorageService.setValue(
-            STORAGE_VALUES.tokenValue,
-            JSON.stringify(response.headers[CREDENTIALS.token])
-          );
+          LocalStorageService.setValue(STORAGE_KEYS.token, response.headers[CREDENTIALS.token]);
+          LocalStorageService.setValue(STORAGE_KEYS.client, response.headers.client);
+          LocalStorageService.setValue(STORAGE_KEYS.uid, response.headers.uid);
         }
       },
       onError: err => {
