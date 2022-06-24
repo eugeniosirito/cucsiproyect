@@ -20,7 +20,7 @@ function App() {
           {/* Private routes */}
           <Route element={<PrivateRoute />}>
             <Route path={PATH_NAMES.navBar} element={<NavBar />} />
-            <Route path="/books/:id" element={<Details />} />
+            <Route path={PATH_NAMES.details} element={<Details />} />
           </Route>
           {/* Public Routes */}
           <Route path={PATH_NAMES.signup} element={<Home />} />
