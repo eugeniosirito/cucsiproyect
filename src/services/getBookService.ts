@@ -1,6 +1,6 @@
 import api from 'config/api';
 import Libro from 'utils/LibrosTypes';
-import { Headers } from 'utils/HeadersInterface';
+import { Headers } from 'interfaces/HeadersInterface';
 
 interface BookResponse {
   page: Libro[];
