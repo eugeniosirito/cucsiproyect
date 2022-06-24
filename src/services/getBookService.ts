@@ -1,6 +1,7 @@
 import api from 'config/api';
+import { Headers } from 'utils/HeadersInterface';
 
-export const getBooks = (headers: { token: string | null; uid: string | null; client: string | null }) => {
+export const getBooks = (headers: Headers) => {
   const { token, uid, client } = headers;
   return api.get(
     '/books',

@@ -1,5 +1,4 @@
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
 import { getBooks } from 'services/getBookService';
 import LocalStorageService from 'services/LocalStorageService';
