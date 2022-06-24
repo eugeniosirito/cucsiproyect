@@ -1,1 +1,90 @@
-[{"C:\\Users\\54115\\Desktop\\React Training\\Proyecto\\es-react\\src\\constants\\constantsStorageValues.ts":"1","C:\\Users\\54115\\Desktop\\React Training\\Proyecto\\es-react\\src\\screens\\NavBar\\index.tsx":"2","C:\\Users\\54115\\Desktop\\React Training\\Proyecto\\es-react\\src\\screens\\Login\\index.tsx":"3","C:\\Users\\54115\\Desktop\\React Training\\Proyecto\\es-react\\src\\components\\PrivateRoute\\index.tsx":"4","C:\\Users\\54115\\Desktop\\React Training\\Proyecto\\es-react\\src\\screens\\BookList\\index.tsx":"5"},{"size":60,"mtime":1656012958963,"results":"6","hashOfConfig":"7"},{"size":1197,"mtime":1656013844858,"results":"8","hashOfConfig":"7"},{"size":3299,"mtime":1656013067233,"results":"9","hashOfConfig":"7"},{"size":474,"mtime":1656013932176,"results":"10","hashOfConfig":"7"},{"size":1512,"mtime":1656013498687,"results":"11","hashOfConfig":"7"},{"filePath":"12","messages":"13","errorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0},"vfltb6",{"filePath":"14","messages":"15","errorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0},{"filePath":"16","messages":"17","errorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0},{"filePath":"18","messages":"19","errorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0},{"filePath":"20","messages":"21","errorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0},"C:\\Users\\54115\\Desktop\\React Training\\Proyecto\\es-react\\src\\constants\\constantsStorageValues.ts",[],"C:\\Users\\54115\\Desktop\\React Training\\Proyecto\\es-react\\src\\screens\\NavBar\\index.tsx",[],"C:\\Users\\54115\\Desktop\\React Training\\Proyecto\\es-react\\src\\screens\\Login\\index.tsx",[],"C:\\Users\\54115\\Desktop\\React Training\\Proyecto\\es-react\\src\\components\\PrivateRoute\\index.tsx",[],"C:\\Users\\54115\\Desktop\\React Training\\Proyecto\\es-react\\src\\screens\\BookList\\index.tsx",[]]
+[
+    {
+        "C:\\Users\\54115\\Desktop\\React Training\\Proyecto\\es-react\\src\\constants\\constantsStorageValues.ts": "1",
+        "C:\\Users\\54115\\Desktop\\React Training\\Proyecto\\es-react\\src\\screens\\NavBar\\index.tsx": "2",
+        "C:\\Users\\54115\\Desktop\\React Training\\Proyecto\\es-react\\src\\screens\\Login\\index.tsx": "3",
+        "C:\\Users\\54115\\Desktop\\React Training\\Proyecto\\es-react\\src\\components\\PrivateRoute\\index.tsx": "4",
+        "C:\\Users\\54115\\Desktop\\React Training\\Proyecto\\es-react\\src\\screens\\BookList\\index.tsx": "5"
+    },
+    {
+        "size": 60,
+        "mtime": 1656012958963,
+        "results": "6",
+        "hashOfConfig": "7"
+    },
+    {
+        "size": 1197,
+        "mtime": 1656013844858,
+        "results": "8",
+        "hashOfConfig": "7"
+    },
+    {
+        "size": 3299,
+        "mtime": 1656013067233,
+        "results": "9",
+        "hashOfConfig": "7"
+    },
+    {
+        "size": 474,
+        "mtime": 1656013932176,
+        "results": "10",
+        "hashOfConfig": "7"
+    },
+    {
+        "size": 1512,
+        "mtime": 1656013498687,
+        "results": "11",
+        "hashOfConfig": "7"
+    },
+    {
+        "filePath": "12",
+        "messages": "13",
+        "errorCount": 0,
+        "warningCount": 0,
+        "fixableErrorCount": 0,
+        "fixableWarningCount": 0
+    },
+    "vfltb6",
+    {
+        "filePath": "14",
+        "messages": "15",
+        "errorCount": 0,
+        "warningCount": 0,
+        "fixableErrorCount": 0,
+        "fixableWarningCount": 0
+    },
+    {
+        "filePath": "16",
+        "messages": "17",
+        "errorCount": 0,
+        "warningCount": 0,
+        "fixableErrorCount": 0,
+        "fixableWarningCount": 0
+    },
+    {
+        "filePath": "18",
+        "messages": "19",
+        "errorCount": 0,
+        "warningCount": 0,
+        "fixableErrorCount": 0,
+        "fixableWarningCount": 0
+    },
+    {
+        "filePath": "20",
+        "messages": "21",
+        "errorCount": 0,
+        "warningCount": 0,
+        "fixableErrorCount": 0,
+        "fixableWarningCount": 0
+    },
+    "C:\\Users\\54115\\Desktop\\React Training\\Proyecto\\es-react\\src\\constants\\constantsStorageValues.ts",
+    [],
+    "C:\\Users\\54115\\Desktop\\React Training\\Proyecto\\es-react\\src\\screens\\NavBar\\index.tsx",
+    [],
+    "C:\\Users\\54115\\Desktop\\React Training\\Proyecto\\es-react\\src\\screens\\Login\\index.tsx",
+    [],
+    "C:\\Users\\54115\\Desktop\\React Training\\Proyecto\\es-react\\src\\components\\PrivateRoute\\index.tsx",
+    [],
+    "C:\\Users\\54115\\Desktop\\React Training\\Proyecto\\es-react\\src\\screens\\BookList\\index.tsx",
+    []
+]
