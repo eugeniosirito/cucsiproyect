@@ -1,5 +1,4 @@
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { useQuery } from 'react-query';
 
@@ -15,7 +14,9 @@ function BookList() {
   const client = LocalStorageService.getValue(STORAGE_KEYS.client);
   const headers = { token, uid, client };
 
-  const { data } = useQuery('books', () => getBooks(headers).then(response => response.data?.page));
+  const { data } = useQuery(STORAGE_KEYS.books, () =>
+    getBooks(headers).then(response => response.data?.page)
+  );
 
   return (
     <div className={styles.container}>
