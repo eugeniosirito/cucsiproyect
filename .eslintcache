@@ -1,1 +1,108 @@
-[{"C:\\Users\\54115\\Desktop\\React Training\\Proyecto\\es-react\\src\\screens\\NavBar\\index.tsx":"1","C:\\Users\\54115\\Desktop\\React Training\\Proyecto\\es-react\\src\\screens\\BookList\\index.tsx":"2","C:\\Users\\54115\\Desktop\\React Training\\Proyecto\\es-react\\src\\services\\getBookService.ts":"3"},{"size":1191,"mtime":1656091943659,"results":"4","hashOfConfig":"5"},{"size":1366,"mtime":1656092034540,"results":"6","hashOfConfig":"5"},{"size":435,"mtime":1656092069527,"results":"7","hashOfConfig":"5"},{"filePath":"8","messages":"9","errorCount":4,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0,"source":null},"vfltb6",{"filePath":"10","messages":"11","errorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0},{"filePath":"12","messages":"13","errorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0},"C:\\Users\\54115\\Desktop\\React Training\\Proyecto\\es-react\\src\\screens\\NavBar\\index.tsx",["14","15","16","17"],"C:\\Users\\54115\\Desktop\\React Training\\Proyecto\\es-react\\src\\screens\\BookList\\index.tsx",[],"C:\\Users\\54115\\Desktop\\React Training\\Proyecto\\es-react\\src\\services\\getBookService.ts",[],{"ruleId":"18","severity":2,"message":"19","line":7,"column":22,"nodeType":"20","endLine":7,"endColumn":40},{"ruleId":"21","severity":2,"message":"19","line":7,"column":22,"nodeType":"20","endLine":7,"endColumn":40},{"ruleId":"22","severity":2,"message":"19","line":7,"column":22,"nodeType":"20","endLine":7,"endColumn":40},{"ruleId":"23","severity":2,"message":"19","line":7,"column":22,"nodeType":"20","endLine":7,"endColumn":40},"import/namespace","Parse errors in imported module 'screens/BookList': Merge conflict marker encountered. (1:0)","Literal","import/default","import/no-named-as-default","import/no-named-as-default-member"]
+[
+    {
+        "C:\\Users\\54115\\Desktop\\React Training\\Proyecto\\es-react\\src\\screens\\NavBar\\index.tsx": "1",
+        "C:\\Users\\54115\\Desktop\\React Training\\Proyecto\\es-react\\src\\screens\\BookList\\index.tsx": "2",
+        "C:\\Users\\54115\\Desktop\\React Training\\Proyecto\\es-react\\src\\services\\getBookService.ts": "3"
+    },
+    {
+        "size": 1191,
+        "mtime": 1656091943659,
+        "results": "4",
+        "hashOfConfig": "5"
+    },
+    {
+        "size": 1366,
+        "mtime": 1656092034540,
+        "results": "6",
+        "hashOfConfig": "5"
+    },
+    {
+        "size": 435,
+        "mtime": 1656092069527,
+        "results": "7",
+        "hashOfConfig": "5"
+    },
+    {
+        "filePath": "8",
+        "messages": "9",
+        "errorCount": 4,
+        "warningCount": 0,
+        "fixableErrorCount": 0,
+        "fixableWarningCount": 0,
+        "source": null
+    },
+    "vfltb6",
+    {
+        "filePath": "10",
+        "messages": "11",
+        "errorCount": 0,
+        "warningCount": 0,
+        "fixableErrorCount": 0,
+        "fixableWarningCount": 0
+    },
+    {
+        "filePath": "12",
+        "messages": "13",
+        "errorCount": 0,
+        "warningCount": 0,
+        "fixableErrorCount": 0,
+        "fixableWarningCount": 0
+    },
+    "C:\\Users\\54115\\Desktop\\React Training\\Proyecto\\es-react\\src\\screens\\NavBar\\index.tsx",
+    [
+        "14",
+        "15",
+        "16",
+        "17"
+    ],
+    "C:\\Users\\54115\\Desktop\\React Training\\Proyecto\\es-react\\src\\screens\\BookList\\index.tsx",
+    [],
+    "C:\\Users\\54115\\Desktop\\React Training\\Proyecto\\es-react\\src\\services\\getBookService.ts",
+    [],
+    {
+        "ruleId": "18",
+        "severity": 2,
+        "message": "19",
+        "line": 7,
+        "column": 22,
+        "nodeType": "20",
+        "endLine": 7,
+        "endColumn": 40
+    },
+    {
+        "ruleId": "21",
+        "severity": 2,
+        "message": "19",
+        "line": 7,
+        "column": 22,
+        "nodeType": "20",
+        "endLine": 7,
+        "endColumn": 40
+    },
+    {
+        "ruleId": "22",
+        "severity": 2,
+        "message": "19",
+        "line": 7,
+        "column": 22,
+        "nodeType": "20",
+        "endLine": 7,
+        "endColumn": 40
+    },
+    {
+        "ruleId": "23",
+        "severity": 2,
+        "message": "19",
+        "line": 7,
+        "column": 22,
+        "nodeType": "20",
+        "endLine": 7,
+        "endColumn": 40
+    },
+    "import/namespace",
+    "Parse errors in imported module 'screens/BookList': Merge conflict marker encountered. (1:0)",
+    "Literal",
+    "import/default",
+    "import/no-named-as-default",
+    "import/no-named-as-default-member"
+]
