@@ -1,7 +1,6 @@
 @import '../../scss/variables/globalVariables.scss';
 
 .container {
-    margin: auto;
     box-shadow: 0px 0px 15px;
 }
 
@@ -11,10 +10,11 @@
     justify-content: center;
     align-items: center;
     margin-right: 246px;
-    margin-top: 26px;
+    margin-top: 28px;
 }
 
 .log-out {
+    margin-right: 20px;
     font-size: 18px;
     font-family: $font-family-base;
     font-weight: 500;
@@ -27,6 +27,6 @@
 }
 
 
-.wolox-Img {
+.wolox-img {
     margin-left: 246px;
 }

@@ -2,14 +2,10 @@ import api from 'config/api';
 import Libro from 'utils/LibrosTypes';
 import { Headers } from 'interfaces/HeadersInterface';
 
-interface BookResponse {
-  page: Libro[];
-}
-
-export const getBooks = (headers: Headers) => {
+export const getDetails = (headers: Headers, id?: string) => {
   const { token, uid, client } = headers;
-  return api.get<BookResponse>(
-    '/books',
+  return api.get<Libro>(
+    `/books/${id}`,
     {},
     {
       headers: {

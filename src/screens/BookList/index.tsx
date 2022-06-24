@@ -1,32 +1,31 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { useQuery } from 'react-query';
 
 import { getBooks } from 'services/getBookService';
 import LocalStorageService from 'services/LocalStorageService';
-import Libro from 'utils/LibrosTypes';
 import { STORAGE_KEYS } from 'constants/constantsLocalStorage';
 
 import styles from './styles.module.scss';
 
 function BookList() {
-  const [libros, setLibros] = useState<Libro[]>([]);
   const token = LocalStorageService.getValue(STORAGE_KEYS.token);
   const uid = LocalStorageService.getValue(STORAGE_KEYS.uid);
   const client = LocalStorageService.getValue(STORAGE_KEYS.client);
   const headers = { token, uid, client };
 
-  const fetchLibros = () => {
-    getBooks(headers).then(response => {
-      const data = response.data as any;
-      setLibros(data.page as Libro[]);
-    });
-  };
+  const { data } = useQuery(STORAGE_KEYS.books, () =>
+    getBooks(headers).then(response => response.data?.page)
+  );
 
   return (
     <div className={styles.container}>
       <div className={styles.imgContainer}>
-        {libros.map(libro => (
-          <div key={libro.id}>
-            <img src={libro.image_url} className={styles.portada} />
+        {data?.map(libro => (
+          <div key={libro.id} className={styles.border}>
+            <Link to={`/books/${libro.id}`}>
+              <img src={libro.image_url} className={styles.portada} />
+            </Link>
             <div className={styles.textContainer}>
               <label className={styles.title}>{libro.title}</label>
               <label className={styles.author}>{libro.author}</label>
@@ -34,10 +33,6 @@ function BookList() {
           </div>
         ))}
       </div>
-
-      <button type="submit" onClick={fetchLibros}>
-        Traer Libros
-      </button>
     </div>
   );
 }

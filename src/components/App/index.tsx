@@ -7,6 +7,7 @@ import 'scss/application.scss';
 import Home from 'screens/Home/index';
 import Login from 'screens/Login';
 import NavBar from 'screens/NavBar';
+import Details from 'screens/Details';
 import PrivateRoute from 'components/PrivateRoute';
 
 const queryClient = new QueryClient();
@@ -19,6 +20,7 @@ function App() {
           {/* Private routes */}
           <Route element={<PrivateRoute />}>
             <Route path={PATH_NAMES.navBar} element={<NavBar />} />
+            <Route path={PATH_NAMES.details} element={<Details />} />
           </Route>
           {/* Public Routes */}
           <Route path={PATH_NAMES.signup} element={<Home />} />

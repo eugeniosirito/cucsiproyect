@@ -1,5 +1,7 @@
 export const STORAGE_KEYS = {
   token: 'token',
   uid: 'uid',
-  client: 'client'
+  client: 'client',
+  books: 'books',
+  details: 'details'
 };
