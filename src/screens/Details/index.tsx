@@ -18,9 +18,11 @@ function Details() {
   const token = LocalStorageService.getValue(STORAGE_KEYS.token);
   const uid = LocalStorageService.getValue(STORAGE_KEYS.uid);
   const client = LocalStorageService.getValue(STORAGE_KEYS.client);
-  const headers = { token, uid, client, id };
+  const headers = { token, uid, client };
 
-  const { data } = useQuery('details', () => getDetails(headers).then(response => response.data));
+  const { data } = useQuery(STORAGE_KEYS.details, () =>
+    getDetails(headers, id).then(response => response.data)
+  );
 
   const goBack = () => {
     navigate(PATH_NAMES.navBar);
@@ -43,15 +45,15 @@ function Details() {
           </h2>
           <p className={styles.text}>
             {i18next.t('LogIn:author')}
-            <p className={styles.textContent}>{data?.author}</p>
+            <span className={styles.textContent}>{data?.author}</span>
           </p>
           <p className={styles.text}>
             {i18next.t('LogIn:editor')}
-            <p className={styles.textContent}>{data?.editor}</p>
+            <span className={styles.textContent}>{data?.editor}</span>
           </p>
           <p className={styles.text}>
             {i18next.t('LogIn:year')}
-            <p className={styles.textContent}>{data?.year}</p>
+            <span className={styles.textContent}>{data?.year}</span>
           </p>
         </div>
       </div>

@@ -1,15 +1,9 @@
 import api from 'config/api';
 import Libro from 'utils/LibrosTypes';
+import { Headers } from 'interfaces/HeadersInterface';
 
-interface Headers {
-  token: string | null;
-  uid: string | null;
-  client: string | null;
-  id: string | undefined;
-}
-
-export const getDetails = (headers: Headers) => {
-  const { token, uid, client, id } = headers;
+export const getDetails = (headers: Headers, id?: string) => {
+  const { token, uid, client } = headers;
   return api.get<Libro>(
     `/books/${id}`,
     {},

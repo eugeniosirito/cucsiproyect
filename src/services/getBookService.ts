@@ -1,11 +1,6 @@
 import api from 'config/api';
 import Libro from 'utils/LibrosTypes';
-
-interface Headers {
-  token: string | null;
-  uid: string | null;
-  client: string | null;
-}
+import { Headers } from 'interfaces/HeadersInterface';
 
 interface BookResponse {
   page: Libro[];

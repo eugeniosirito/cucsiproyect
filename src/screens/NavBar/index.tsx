@@ -21,7 +21,7 @@ function NavBar() {
   };
 
   return (
-    <div>
+    <>
       <nav className={styles.container}>
         <div className={styles.rectangleTop} />
         <img src={wolox} alt="" className={styles.woloxImg} />
@@ -32,7 +32,7 @@ function NavBar() {
         </div>
       </nav>
       <BookList />
-    </div>
+    </>
   );
 }
 
