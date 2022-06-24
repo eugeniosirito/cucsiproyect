@@ -23,7 +23,6 @@ function App() {
           {/* Public Routes */}
           <Route path={PATH_NAMES.signup} element={<Home />} />
           <Route path={PATH_NAMES.login} element={<Login />} />
-          <Route path={PATH_NAMES.login} element={<Login />} />
         </Routes>
       </Router>
     </QueryClientProvider>
