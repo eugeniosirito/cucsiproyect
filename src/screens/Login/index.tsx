@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useMutation } from 'react-query';
+import { Link, Navigate } from 'react-router-dom';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import i18next from 'i18next';
+import { ApiResponse } from 'apisauce';
 
 import { PATH_NAMES } from 'constants/constantsPaths';
 import { CREDENTIALS } from 'constants/constantsCredentials';
@@ -9,6 +11,7 @@ import Input from 'components/Input';
 import { INPUT_NAMES } from 'constants/constantsUser';
 import { Usuario } from 'utils/UsersTypes';
 import { login } from 'services/LoginService';
+import LocalStorageService from 'services/LocalStorageService';
 import { PATTERNS } from 'constants/constantsPatterns';
 
 import styles from './styles.module.scss';
@@ -16,25 +19,29 @@ import wolox from './assets/wolox.png';
 
 function Login() {
   const { register, handleSubmit, errors } = useForm<Usuario>();
-  const [error, setError] = useState(null);
+  const [error, setError] = useState('');
 
-  const onSubmit: SubmitHandler<Usuario> = formData => {
-    login(formData)
-      .then(res => {
-        if (!res.ok) {
+  /* crear interfaz con { message: string } */
+  const { mutate, isSuccess, isLoading } = useMutation<ApiResponse<unknown>, { message: string }, Usuario>(
+    (formData: Usuario) => login(formData),
+    {
+      onSuccess: response => {
+        if (!response.ok) {
           throw Error('Credenciales Invalidas');
         }
-        if (res.headers) {
-          console.log(res.headers.client);
-          console.log(res.headers.uid);
-          console.log(res.headers[CREDENTIALS.token]);
-          console.log(res);
+        if (response.headers) {
+          LocalStorageService.setValue('logged', JSON.stringify(response.headers[CREDENTIALS.token]));
         }
-      })
-      .catch(err => {
+      },
+      onError: err => {
         setError(err.message);
-      });
-  };
+      }
+    }
+  );
+  const onSubmit: SubmitHandler<Usuario> = formData => mutate(formData);
+  if (isSuccess) {
+    return <Navigate to={PATH_NAMES.navBar} />;
+  }
 
   return (
     <div className={styles.app}>
@@ -68,7 +75,7 @@ function Login() {
         />
 
         <button type="submit" className={styles.sign}>
-          {i18next.t('LogIn:logIn')}
+          {isLoading ? i18next.t('LogIn:cargando') : i18next.t('LogIn:logIn')}
         </button>
 
         <Link to={PATH_NAMES.signup} className={styles.login}>

@@ -13,5 +13,7 @@ i18next.addResources('es', 'LogIn', {
   emailError: 'Email obligatorio',
   passwordError: 'Password obligatorio',
   confPasswordError: 'Confirmacion de password obligatorio',
-  invalidEmail: 'El formato de mail no es correcto'
+  invalidEmail: 'El formato de mail no es correcto',
+  logOut: 'Logout',
+  cargando: 'Cargando'
 });
