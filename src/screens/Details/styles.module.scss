@@ -1,12 +1,13 @@
 @import '../../scss/variables/globalVariables.scss';
+@import '../../scss/variables/colors';
 
 .container {
     padding: 24px;
-    background-color: #fff;
+    background-color: $white;
     width: 900px;
     display: flex;
     margin: 200px auto;
-    box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 4px 4px 10px 0 $rgb-color;
 }
 
 .atras-arrow {
@@ -15,6 +16,12 @@
     align-items: center;
     top: 10%;
     left: 26.4%;
+}
+
+.badge {
+    position: absolute;
+    left: 38.5%;
+    top: 21%;
 }
 
 .atras {

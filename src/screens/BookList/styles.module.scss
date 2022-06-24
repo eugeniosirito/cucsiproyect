@@ -2,7 +2,7 @@
 @import '../../scss/variables/colors';
 
 .container {
-    background-color: #f4f4f4;
+    background-color: $light-grey;
 }
 
 .img-container {
@@ -18,7 +18,7 @@
 
 .border {
     padding: 28px;
-    box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+    box-shadow: $box-shadow;
 }
 
 .portada {

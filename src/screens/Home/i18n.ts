@@ -15,5 +15,9 @@ i18next.addResources('es', 'LogIn', {
   confPasswordError: 'Confirmacion de password obligatorio',
   invalidEmail: 'El formato de mail no es correcto',
   logOut: 'Logout',
-  cargando: 'Cargando'
+  cargando: 'Cargando',
+  atras: 'Atrás',
+  author: 'Autor del libro: ',
+  editor: 'Editorial: ',
+  year: 'Año de publicación: '
 });
