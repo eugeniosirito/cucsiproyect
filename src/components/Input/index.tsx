@@ -14,7 +14,9 @@ interface Props {
 function Input({ label, name, id, register, errors, type = 'text' }: Props) {
   return (
     <div className={styles.field}>
-      <label className={styles.nombre}>{label}</label>
+      <label htmlFor={name} className={styles.nombre}>
+        {label}
+      </label>
       <input placeholder={label} name={name} type={type} id={id} className={styles.input} ref={register} />
       <span className={styles.requiredInput}>{errors}</span>
     </div>

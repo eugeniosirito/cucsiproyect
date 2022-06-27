@@ -1,16 +1,19 @@
 import React, { useState } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import i18next from 'i18next';
+import { useNavigate } from 'react-router-dom';
 
 import Input from 'components/Input';
 import { INPUT_NAMES } from 'constants/constantsUser';
 import { Usuario } from 'utils/UsersTypes';
 import { signUp } from 'services/SignupService';
+import { PATH_NAMES } from 'constants/constantsPaths';
 
 import wolox from './assets/wolox.png';
 import styles from './styles.module.scss';
 
 function Home() {
+  const navigate = useNavigate();
   const { register, handleSubmit, errors } = useForm<Usuario>();
   const [error, setError] = useState(null);
 
@@ -20,6 +23,7 @@ function Home() {
         if (!res.ok) {
           throw Error('Invalid input information');
         }
+        navigate(PATH_NAMES.login);
       })
       .catch(err => {
         setError(err.message);
