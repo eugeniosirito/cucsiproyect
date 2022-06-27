@@ -4,7 +4,11 @@ import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { rest } from 'msw';
 import { setupServer } from 'msw/node';
-import { BrowserRouter } from 'react-router-dom';
+import { Route, Routes, MemoryRouter } from 'react-router-dom';
+import { QueryClient, QueryClientProvider } from 'react-query';
+
+import Login from 'screens/Login';
+import { PATH_NAMES } from 'constants/constantsPaths';
 
 import Home from './index';
 
@@ -13,17 +17,7 @@ const server = setupServer(
   rest.post(baseURL, (req, res, ctx) =>
     res(
       // eslint-disable-next-line no-magic-numbers
-      ctx.status(200),
-      ctx.json({
-        data: {
-          first_name: 'Eugenio Pedro',
-          last_name: 'siridcostassirito',
-          email: 'siricosdstafsdfssirito@hotmail.com',
-          password: 'siricostasirito123',
-          password_confirmation: 'siricostasirito123',
-          locale: 'es'
-        }
-      })
+      ctx.status(200)
     )
   )
 );
@@ -31,28 +25,41 @@ const server = setupServer(
 beforeAll(() => server.listen());
 afterEach(() => server.resetHandlers());
 afterAll(() => server.close());
+const queryClient = new QueryClient();
 
 test('signs up with valid fields', async () => {
   render(
-    <BrowserRouter>
-      <Home />
-    </BrowserRouter>
+    <QueryClientProvider client={queryClient}>
+      <MemoryRouter initialEntries={[PATH_NAMES.signup]}>
+        <Routes>
+          <Route path={PATH_NAMES.signup} element={<Home />} />
+          <Route path={PATH_NAMES.login} element={<Login />} />
+        </Routes>
+      </MemoryRouter>
+    </QueryClientProvider>
   );
   userEvent.type(screen.getByLabelText('LogIn:nameInput'), 'Eugenio Pedro');
   userEvent.type(screen.getByLabelText('LogIn:surnameInput'), 'siridcostassirito');
   userEvent.type(screen.getByLabelText('LogIn:emailInput'), 'siricosdstafsdfssirito@hotmail.com');
   userEvent.type(screen.getByLabelText('LogIn:passwordInput'), 'siricostasirito123');
   userEvent.type(screen.getByLabelText('LogIn:confPasswordInput'), 'siricostasirito123');
-
-  await waitFor(async () => userEvent.click(await screen.findByRole('button', { name: 'LogIn:signUp' })));
-  expect(await screen.findByText('Success!')).toBeInTheDocument();
+  await waitFor(() => userEvent.click(screen.getByRole('button', { name: 'LogIn:signUp' })));
+  expect(screen.getByLabelText('LogIn:emailInput')).toBeInTheDocument();
+  expect(screen.getByLabelText('LogIn:passwordInput')).toBeInTheDocument();
+  expect(screen.queryByLabelText('LogIn:nameInput')).not.toBeInTheDocument();
+  expect(screen.queryByLabelText('LogIn:surnameInput')).not.toBeInTheDocument();
+  expect(screen.queryByLabelText('LogIn:confPasswordInput')).not.toBeInTheDocument();
 });
 
 test('it shows errors if the fields are empty', async () => {
   render(
-    <BrowserRouter>
-      <Home />
-    </BrowserRouter>
+    <QueryClientProvider client={queryClient}>
+      <MemoryRouter initialEntries={[PATH_NAMES.signup]}>
+        <Routes>
+          <Route path={PATH_NAMES.signup} element={<Home />} />
+        </Routes>
+      </MemoryRouter>
+    </QueryClientProvider>
   );
 
   await waitFor(async () => userEvent.click(await screen.findByRole('button', { name: 'LogIn:signUp' })));
@@ -65,12 +72,14 @@ test('it shows errors if the fields are empty', async () => {
 
 test('cant submit with invalid inputs', async () => {
   render(
-    <BrowserRouter>
-      <Home />
-    </BrowserRouter>
+    <QueryClientProvider client={queryClient}>
+      <MemoryRouter initialEntries={[PATH_NAMES.signup]}>
+        <Routes>
+          <Route path={PATH_NAMES.signup} element={<Home />} />
+        </Routes>
+      </MemoryRouter>
+    </QueryClientProvider>
   );
-
-  screen.debug();
   userEvent.type(screen.getByLabelText('LogIn:nameInput'), 'eugenipedroeugenio');
   userEvent.type(screen.getByLabelText('LogIn:surnameInput'), 'siricostasirito');
   userEvent.type(screen.getByLabelText('LogIn:emailInput'), 'asd');
@@ -83,12 +92,15 @@ test('cant submit with invalid inputs', async () => {
 
 test('cant submit with an empty input', async () => {
   render(
-    <BrowserRouter>
-      <Home />
-    </BrowserRouter>
+    <QueryClientProvider client={queryClient}>
+      <MemoryRouter initialEntries={[PATH_NAMES.signup]}>
+        <Routes>
+          <Route path={PATH_NAMES.signup} element={<Home />} />
+        </Routes>
+      </MemoryRouter>
+    </QueryClientProvider>
   );
 
-  screen.debug();
   userEvent.type(screen.getByLabelText('LogIn:nameInput'), 'eugenipedroeugenio');
   userEvent.type(screen.getByLabelText('LogIn:surnameInput'), 'siricostasirito');
   userEvent.type(screen.getByLabelText('LogIn:emailInput'), '');

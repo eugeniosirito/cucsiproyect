@@ -16,7 +16,6 @@ function Home() {
   const navigate = useNavigate();
   const { register, handleSubmit, errors } = useForm<Usuario>();
   const [error, setError] = useState(null);
-  const [success, setSuccess] = useState('');
 
   const onSubmit: SubmitHandler<Usuario> = formData => {
     signUp(formData)
@@ -24,7 +23,6 @@ function Home() {
         if (!res.ok) {
           throw Error('Invalid input information');
         }
-        setSuccess('Success!');
         navigate(PATH_NAMES.login);
       })
       .catch(err => {
@@ -95,7 +93,7 @@ function Home() {
       <button type="submit" className={styles.login}>
         {i18next.t('LogIn:logIn')}
       </button>
-      <div className={styles.invalidInput}>{error ? error : success}</div>
+      {error && <div className={styles.invalidInput}>{error}</div>}
     </form>
   );
 }
