@@ -1,18 +1,22 @@
 import React, { useState } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import i18next from 'i18next';
+import { useNavigate } from 'react-router-dom';
 
 import Input from 'components/Input';
 import { INPUT_NAMES } from 'constants/constantsUser';
 import { Usuario } from 'utils/UsersTypes';
 import { signUp } from 'services/SignupService';
+import { PATH_NAMES } from 'constants/constantsPaths';
 
 import wolox from './assets/wolox.png';
 import styles from './styles.module.scss';
 
 function Home() {
+  const navigate = useNavigate();
   const { register, handleSubmit, errors } = useForm<Usuario>();
   const [error, setError] = useState(null);
+  const [success, setSuccess] = useState('');
 
   const onSubmit: SubmitHandler<Usuario> = formData => {
     signUp(formData)
@@ -20,6 +24,8 @@ function Home() {
         if (!res.ok) {
           throw Error('Invalid input information');
         }
+        setSuccess('Success!');
+        navigate(PATH_NAMES.login);
       })
       .catch(err => {
         setError(err.message);
@@ -89,7 +95,7 @@ function Home() {
       <button type="submit" className={styles.login}>
         {i18next.t('LogIn:logIn')}
       </button>
-      {error && <div className={styles.invalidInput}>{error}</div>}
+      <div className={styles.invalidInput}>{error ? error : success}</div>
     </form>
   );
 }
