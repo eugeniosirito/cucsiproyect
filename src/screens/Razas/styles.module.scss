@@ -1,0 +1,167 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1.25rem;
+    width: 1350px;
+    margin: auto;
+    border: 5px solid black;
+    border-radius: 10px;
+    margin-top: 20px;
+    background-color: hsl(0, 0%, 0%);
+    box-shadow: 0px 0px 22px 0px;
+}
+
+.razasDiv {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.razasTitulo {
+    color: rgb(244, 237, 237);
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    font-size: 32px;
+    text-decoration: underline;
+}
+
+.razasParrafo {
+    color: rgb(244, 237, 237);
+    font-family: 'Cinzel', serif;
+    font-weight: 500;
+    font-size: 22px;
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    line-height: 20px;
+}
+
+.razasListado {
+    padding: 20px;
+    color: rgb(244, 237, 237);
+}
+
+.tablaRazas {
+    display: flex;
+    flex-direction: column;
+}
+
+.tablaTitulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.atributos {
+    color: rgb(244, 237, 237);
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    font-size: 32px;
+    text-decoration: underline;
+}
+
+.atributosContenido {
+    color: rgb(244, 237, 237);
+    font-family: 'Cinzel', serif;
+    font-weight: 500;
+    font-size: 22px;
+    padding: 20px;
+    text-align: center;
+}
+
+.tablaAtributos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.img {
+    height: 40px;
+}
+
+.contenedorCaras {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.cara {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgCara1 {
+    width: 50px;
+    animation: aparicion 1.4s ease-out;
+}
+
+.imgCara2 {
+    width: 50px;
+    animation: aparicion 1.6s ease-out;
+}
+
+.imgCara3 {
+    width: 50px;
+    animation: aparicion 1.8s ease-out;
+}
+
+.imgCara4 {
+    width: 50px;
+    animation: aparicion 2s ease-out;
+}
+
+.imgCara5 {
+    width: 50px;
+    animation: aparicion 2.2s ease-out;
+}
+
+.imgCara6 {
+    width: 50px;
+    animation: aparicion 2.4s ease-out;
+}
+
+.nombreCara {
+    color: rgb(244, 237, 237);
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+    padding: 20px;
+}
+
+.volver {
+    color: rgb(244, 237, 237);
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    font-size: 32px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.volver:hover {
+    color: rgb(58, 58, 241);
+    text-decoration: underline;
+}
+
+
+@keyframes aparicion {
+    0% {
+        transform: translateY(-1000px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}

@@ -1,0 +1,185 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 1.25rem;
+    width: 700px;
+    margin-left: 250px;
+    border: 4px solid black;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0px 0px 22px 0px;
+    animation: aparicion 1.2s ease-out;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+        url("https://cdn.pixabay.com/photo/2017/02/07/09/02/wood-2045380__480.jpg");
+}
+
+.container:hover {
+    opacity: 1;
+    transition: .1s;
+    box-shadow: 2px 2px 5px 5px;
+}
+
+.rankingName {
+    color: rgb(244, 237, 237);
+    font-size: 44px;
+    text-align: center;
+    padding: 20px;
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    text-decoration: underline;
+    text-shadow: 8px -7px 2px black;
+}
+
+.datosUsuario {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.datosTop {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.evento {
+    text-align: center;
+    padding: 20px;
+    margin-right: 15px;
+    margin-left: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+    width: 200px;
+    height: 100px;
+
+}
+
+.top {
+    text-align: center;
+    margin-right: 15px;
+    border-radius: 5px;
+    margin-left: 10px;
+    width: 160px;
+}
+
+.trofeos,
+.eventos,
+.retos,
+.matados {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 20px;
+}
+
+.topUser {
+    color: rgb(244, 237, 237);
+    font-size: 24px;
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+.topUser:hover {
+    text-decoration: underline;
+    text-shadow: 8px -7px 2px black;
+}
+
+.trofeos {
+    color: orange;
+    text-shadow: 8px -7px 2px black;
+}
+
+.eventos {
+    color: rgb(9, 167, 220);
+    text-shadow: 8px -7px 2px black;
+}
+
+.retos {
+    color: rgb(222, 9, 9);
+    text-shadow: 8px -7px 2px black;
+}
+
+.matados {
+    color: rgb(65, 189, 65);
+    text-shadow: 8px -7px 2px black;
+}
+
+
+.dropDown {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.levelTitle {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    margin-right: 15px;
+    margin-left: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+    background-color: hsla(0, 0%, 0%, 0.315);
+    box-shadow: 0px 0px 22px 0px;
+}
+
+.listaUsuarios {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    margin-right: 15px;
+    background-color: hsla(0, 0%, 0%, 0.315);
+    box-shadow: 0px 0px 22px 0px;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+
+.userxlvl {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: rgb(244, 237, 237);
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+
+th {
+    color: rgb(244, 237, 237);
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    font-size: 25px;
+}
+
+td {
+    color: rgb(244, 237, 237);
+    padding: 0.75rem;
+    font-family: 'Cinzel', serif;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.nombre {
+    text-align: center;
+    cursor: pointer;
+}
+
+.nombre:hover {
+    text-decoration: underline;
+}
+
+@keyframes aparicion {
+    0% {
+        transform: translateX(-1500px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}

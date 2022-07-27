@@ -1,0 +1,109 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1.25rem;
+    width: 1350px;
+    margin: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+    background-color: hsla(0, 0%, 0%, 0.658);
+    box-shadow: 0px 0px 22px 0px;
+}
+
+.atributos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.atributos1 {
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    margin-top: 10px;
+}
+
+.atributosNombre {
+    color: rgb(244, 237, 237);
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    font-size: 32px;
+    text-decoration: underline;
+    padding: 20px;
+}
+
+.contenidoAtributos {
+    color: rgb(244, 237, 237);
+    font-family: 'Cinzel', serif;
+    font-weight: 500;
+    font-size: 20px;
+    padding: 20px;
+    line-height: 25px;
+}
+
+.imagenDados {
+    border-radius: 10px;
+}
+
+.lista {
+    font-family: 'Cinzel', serif;
+    font-weight: 500;
+    margin-left: 18px;
+    margin-top: 5px;
+    font-size: 32px;
+    text-decoration: underline;
+}
+
+.lista:first-child {
+    color: rgb(31, 142, 31);
+    animation: aparicion 1.2s ease-out;
+}
+
+.lista:nth-child(2) {
+    color: rgb(245, 245, 109);
+    animation: aparicion 1.8s ease-out;
+}
+
+.lista:nth-child(3) {
+    color: rgb(53, 53, 252);
+    animation: aparicion 2.2s ease-out;
+}
+
+.lista:nth-child(4) {
+    color: rgb(177, 51, 116);
+    animation: aparicion 2.6s ease-out;
+}
+
+.lista:nth-child(5) {
+    color: rgb(253, 50, 50);
+    animation: aparicion 3s ease-out;
+}
+
+.volver {
+    color: rgb(244, 237, 237);
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    font-size: 32px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.volver:hover {
+    color: rgb(58, 58, 241);
+    text-decoration: underline;
+}
+
+
+@keyframes aparicion {
+    0% {
+        transform: translateX(-700px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}

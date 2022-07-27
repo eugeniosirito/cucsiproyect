@@ -1,0 +1,177 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 1.25rem;
+    width: 700px;
+    height: 1000px;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-left: 25px;
+    animation: aparicion 1.2s ease-out;
+}
+
+.descargar {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.descargar h1 {
+    text-align: center;
+    font-size: 44px;
+    color: rgb(244, 237, 237);
+    margin-bottom: 16px;
+    font-family: 'Cinzel', serif;
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+.button {
+    color: rgb(244, 237, 237);
+    width: 200px;
+    padding: 15px;
+    background-color: rgb(16, 127, 218);
+    border-radius: 10px;
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+    line-height: 20px;
+    font-size: 22px;
+    margin-top: 20px;
+}
+
+.button:hover {
+    text-decoration: underline;
+    transition: .4s;
+    background-color: rgb(9, 85, 151);
+}
+
+
+.control {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgb(0, 0, 0);
+    margin-top: 10px;
+    font-size: 24px;
+    color: rgb(244, 237, 237);
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+    font-size: 30px;
+    margin-bottom: 10px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+        url("https://cdn.pixabay.com/photo/2017/02/07/09/02/wood-2045380__480.jpg");
+    border: 2px solid black;
+    box-shadow: 1px 1px 2px 2px black;
+}
+
+.control:hover {
+    transition: .1s;
+    text-decoration: underline;
+    text-shadow: 8px -7px 2px black;
+    opacity: 1;
+    box-shadow: 2px 0px 5px 5px black;
+}
+
+.stats {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    border: 2px solid black;
+    box-shadow: 1px 1px 2px 2px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+        url("https://cdn.pixabay.com/photo/2017/02/07/09/02/wood-2045380__480.jpg")
+}
+
+.stats:hover {
+    transition: .1s;
+    opacity: 1;
+    text-shadow: 8px -7px 2px black;
+    box-shadow: 2px 2px 5px 5px;
+}
+
+.textoStats {
+    color: rgb(244, 237, 237);
+    font-size: 16px;
+    padding: 20px;
+    font-family: 'Cinzel', serif;
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.castillos {
+    box-shadow: 1px 1px 2px 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    border: 2px solid black;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+        url("https://cdn.pixabay.com/photo/2017/02/07/09/02/wood-2045380__480.jpg");
+}
+
+.castillos:hover {
+    transition: .1s;
+    opacity: 1;
+    text-shadow: 8px -7px 2px black;
+    box-shadow: 2px 2px 5px 5px;
+}
+
+.nombreCastillo {
+    font-size: 16px;
+    padding: 20px;
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.castilloTitle {
+    padding: 20px;
+    color: rgb(244, 237, 237);
+    font-size: 26px;
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+    font-size: 34px;
+}
+
+
+.nombreCastillo:nth-child(2) {
+    color: orange;
+}
+
+.nombreCastillo:nth-child(3) {
+    color: rgb(9, 167, 220);
+}
+
+.nombreCastillo:nth-child(4) {
+    color: rgb(237, 57, 57);
+}
+
+.nombreCastillo:nth-child(5) {
+    color: rgb(65, 189, 65);
+}
+
+
+
+
+@keyframes aparicion {
+    0% {
+        transform: translateX(1500px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}

@@ -1,0 +1,53 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1.25rem;
+    margin: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+    background-color: hsla(0, 0%, 0%, 0.658);
+    box-shadow: 0px 0px 22px 0px;
+}
+
+.criaturasContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+.criaturasTitle {
+    color: rgb(244, 237, 237);
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+    font-size: 32px;
+    text-decoration: underline;
+    padding: 20px;
+}
+
+.criaturasContenido {
+    color: rgb(244, 237, 237);
+    font-family: 'Cinzel', serif;
+    font-weight: 500;
+    font-size: 20px;
+    text-align: center;
+    line-height: 25px;
+}
+
+.volver {
+    color: rgb(244, 237, 237);
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    font-size: 32px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.volver:hover {
+    color: rgb(58, 58, 241);
+    text-decoration: underline;
+}

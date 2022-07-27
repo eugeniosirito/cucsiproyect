@@ -1,0 +1,49 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 280px auto;
+    margin-left: 50px;
+    animation: aparicion 1.2s ease-out;
+}
+
+.img {
+    height: 150px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: 53px;
+    opacity: .7;
+}
+
+.img:hover {
+    opacity: 1;
+    transition: .2s;
+    box-shadow: 0px 0px 7px 7px rgb(255, 255, 255);
+}
+
+.redes {
+    color: white;
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    font-size: 44px;
+    text-decoration: underline;
+    text-align: center;
+}
+
+.nuestrasRedes {
+    display: block;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-500px);
+}
+
+@keyframes aparicion {
+    0% {
+        transform: translateY(-1500px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}

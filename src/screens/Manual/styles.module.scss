@@ -1,0 +1,74 @@
+.container {
+    width: 1400px;
+    margin: auto;
+    display: grid;
+    text-align: center;
+    justify-content: center;
+    padding: 50px 0;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 200px));
+    gap: 40px;
+    animation: aparicion 1.2s ease-out;
+    margin-top: 25px;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    box-shadow: 2px 2px 5px 5px rgb(0, 0, 0);
+    border-radius: 5px;
+    background-image: url("https://thumbs.dreamstime.com/b/metal-y-fondo-medieval-de-madera-22357932.jpg");
+    background-size: cover;
+    opacity: 1;
+}
+
+.links:hover {
+    opacity: 1;
+    text-decoration: underline;
+    background-color: black;
+    transition: .2s;
+    box-shadow: 0px 0px 7px 7px rgb(255, 255, 255);
+}
+
+.linkName {
+    color: rgb(244, 237, 237);
+    font-family: 'Cinzel', serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+
+}
+
+.manualTitulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 38px;
+}
+
+.manualTitulo h1 {
+    color: rgb(244, 237, 237);
+    font-family: 'Odibee Sans', cursive;
+    font-size: 44px;
+}
+
+@keyframes aparicion {
+    0% {
+        transform: translateY(-1500px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.working {
+    display: flex;
+    justify-content: center;
+    color: rgb(244, 237, 237);
+    font-family: 'Odibee Sans', cursive;
+    font-size: 22px;
+    text-align: center;
+    transform: translateY(35px);
+}

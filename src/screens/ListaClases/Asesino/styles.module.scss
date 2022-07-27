@@ -1,0 +1,111 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1.25rem;
+    width: 1350px;
+    margin: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+    background-color: hsla(0, 0%, 0%, 0.658);
+    box-shadow: 0px 0px 22px 0px;
+}
+
+.asesinoContenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.tituloAsesino {
+    color: rgb(244, 237, 237);
+    font-family: 'Odibee Sans', cursive;
+    font-size: 32px;
+    text-decoration: underline;
+    margin-bottom: 15px;
+}
+
+.parrafo1 {
+    color: rgb(244, 237, 237);
+    font-family: 'Odibee Sans', cursive;
+    font-size: 22px;
+    padding: 15px;
+    text-align: center;
+    line-height: 20px;
+}
+
+.img {
+    margin-top: 20px;
+    border-radius: 10px;
+    animation: aparicion 2.5s ease-in-out;
+}
+
+.modificadoresH1 {
+    color: rgb(244, 237, 237);
+    font-family: 'Odibee Sans', cursive;
+    font-size: 32px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    text-decoration: underline;
+}
+
+.parrafoContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.tablaAtributos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.tabla {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+td,
+th,
+tr {
+    text-align: center;
+    border: 1px solid white;
+}
+
+th {
+    padding: 15px;
+}
+
+.volver {
+    color: rgb(244, 237, 237);
+    font-family: 'Odibee Sans', cursive;
+    font-size: 32px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.volver:hover {
+    color: rgb(58, 58, 241);
+    text-decoration: underline;
+}
+
+@keyframes aparicion {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

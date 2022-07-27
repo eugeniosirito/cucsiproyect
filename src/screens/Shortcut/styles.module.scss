@@ -1,0 +1,59 @@
+.container {
+    animation: aparicion 2s ease-out;
+}
+
+.items {
+    position: fixed;
+    margin-top: 250px;
+    margin-left: 55px;
+}
+
+.contenido {
+    font-size: 18px;
+    padding: 15px;
+    color: rgb(244, 237, 237);
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+}
+
+.img1,
+.img2,
+.img3,
+.img4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.axe,
+.dungeon,
+.map,
+.monster {
+    background-color: black;
+    border-radius: 50%;
+    opacity: .8;
+}
+
+.axe:hover,
+.dungeon:hover,
+.map:hover,
+.monster:hover {
+    transition: 1s;
+    cursor: pointer;
+    transform: rotate(360deg);
+    opacity: 1;
+    width: 60px;
+    border-bottom: 1px solid blue;
+    border-top: 1px solid red;
+}
+
+@keyframes aparicion {
+    0% {
+        transform: translateX(-1500px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
