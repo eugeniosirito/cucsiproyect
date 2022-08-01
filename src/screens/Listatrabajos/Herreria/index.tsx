@@ -89,16 +89,16 @@ function Herreria() {
         </div>
         <h1 className={styles.trabajoTitulo1}>Lista de Objetos de Herrería</h1>
         <div className={styles.trabajosLista}>
-          <Link className={styles.links} to="/manual/trabajos/pesca">
+          <Link className={styles.links} to="/manual/trabajos/herreria/armadurasaltos">
             Armaduras Altos (Hombre/Mujer)
           </Link>
-          <Link className={styles.links} to="/manual/trabajos/tala">
+          <Link className={styles.links} to="/manual/trabajos/herreria/armadurasbajos">
             Armaduras Bajos (Enano/Gnomo)
           </Link>
-          <Link className={styles.links} to="/manual/trabajos/carpinteria">
+          <Link className={styles.links} to="/manual/trabajos/herreria/armas">
             Armas
           </Link>
-          <Link className={styles.links} to="/manual/trabajos/botanica">
+          <Link className={styles.links} to="/manual/trabajos/herreria/escudos">
             Escudos y Cascos
           </Link>
         </div>

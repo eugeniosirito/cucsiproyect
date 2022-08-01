@@ -68,6 +68,15 @@ import Herreria from 'screens/Listatrabajos/Herreria';
 import Esquila from 'screens/Listatrabajos/Esquila';
 import Hilado from 'screens/Listatrabajos/Hilado';
 import Sastreria from 'screens/Listatrabajos/Sastreria';
+import ArmadurasAltos from 'screens/Listaitems/ArmaduraAltos';
+import ArmadurasBajos from 'screens/Listaitems/ArmaduraBajos';
+import Armas from 'screens/Listaitems/Armas';
+import Escudos from 'screens/Listaitems/Escudos';
+import Tunicas from 'screens/Listaitems/Tunicas';
+import Mapas from 'screens/Mapas';
+import Items from 'screens/Items';
+import Exp from 'screens/Exp';
+import Clanes from 'screens/Clanes';
 
 function App() {
   return (
@@ -139,6 +148,15 @@ function App() {
         <Route path="/manual/trabajos/esquila" element={<Esquila />} />
         <Route path="/manual/trabajos/hilado" element={<Hilado />} />
         <Route path="/manual/trabajos/sastreria" element={<Sastreria />} />
+        <Route path="/manual/trabajos/herreria/armadurasaltos" element={<ArmadurasAltos />} />
+        <Route path="/manual/trabajos/herreria/armadurasbajos" element={<ArmadurasBajos />} />
+        <Route path="/manual/trabajos/herreria/armas" element={<Armas />} />
+        <Route path="/manual/trabajos/herreria/escudos" element={<Escudos />} />
+        <Route path="/manual/trabajos/sastreria/tunicas" element={<Tunicas />} />
+        <Route path="/manual/mapas" element={<Mapas />} />
+        <Route path="/manual/items" element={<Items />} />
+        <Route path="/manual/exp" element={<Exp />} />
+        <Route path="/manual/clanes" element={<Clanes />} />
       </Routes>
     </Router>
   );

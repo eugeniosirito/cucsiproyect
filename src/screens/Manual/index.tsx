@@ -44,18 +44,28 @@ function Manual() {
           </Link>
         </div>
         <div className={styles.links}>
-          <Link className={styles.linkName} to="/home">
-            Mapa*
+          <Link className={styles.linkName} to="/manual/mapas">
+            Mapa
+          </Link>
+        </div>
+        <div className={styles.links}>
+          <Link className={styles.linkName} to="/manual/exp">
+            Exp. x Nivel y Skills Naturales
+          </Link>
+        </div>
+        <div className={styles.links}>
+          <Link className={styles.linkName} to="/manual/items">
+            Items
+          </Link>
+        </div>
+        <div className={styles.links}>
+          <Link className={styles.linkName} to="/manual/clanes">
+            Clanes
           </Link>
         </div>
         <div className={styles.links}>
           <Link className={styles.linkName} to="/home">
             Guia de entrenamiento*
-          </Link>
-        </div>
-        <div className={styles.links}>
-          <Link className={styles.linkName} to="/home">
-            Items*
           </Link>
         </div>
         <div className={styles.links}>
@@ -80,17 +90,7 @@ function Manual() {
         </div>
         <div className={styles.links}>
           <Link className={styles.linkName} to="/home">
-            Clanes*
-          </Link>
-        </div>
-        <div className={styles.links}>
-          <Link className={styles.linkName} to="/home">
             Puntos de usuario*
-          </Link>
-        </div>
-        <div className={styles.links}>
-          <Link className={styles.linkName} to="/home">
-            Exp. x Nivel y Skills Naturales*
           </Link>
         </div>
         <div className={styles.links}>

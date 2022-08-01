@@ -68,7 +68,7 @@ function Sastreria() {
           </div>
         </div>
         <div className={styles.trabajosLista}>
-          <Link className={styles.links} to="/manual/trabajos/pesca">
+          <Link className={styles.links} to="/manual/trabajos/sastreria/tunicas">
             Items de Sastre
           </Link>
         </div>

@@ -1,0 +1,136 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1.25rem;
+    width: 1600px;
+    margin: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+
+}
+
+.contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: hsla(0, 0%, 0%, 0.658);
+    box-shadow: 0px 0px 22px 0px;
+    border-radius: 15px;
+    text-align: center;
+    padding: 20px;
+    padding-top: 20px;
+}
+
+.clases {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(244, 237, 237);
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    font-size: 32px;
+    text-decoration: underline;
+    padding: 20px;
+    text-align: center;
+}
+
+.tipoItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.texto {
+    color: rgb(244, 237, 237);
+    font-family: 'Cinzel', serif;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 25px;
+}
+
+.listaClases1,
+.listaClases2 {
+    width: 1400px;
+    margin: auto;
+    display: grid;
+    text-align: center;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 200px));
+    gap: 40px;
+    opacity: .7;
+    padding: 30px;
+    animation: aparicion 1.2s ease-out;
+}
+
+.listaClases2:hover {
+    opacity: 1;
+    background-color: hsla(0, 0%, 0%, 0.658);
+    color: orange;
+    box-shadow: 0px 0px 22px 0px;
+    border-radius: 15px;
+    transition: .3s;
+}
+
+.listaClases1:hover {
+    opacity: 1;
+    background-color: hsla(0, 0%, 0%, 0.658);
+    color: lightblue;
+    box-shadow: 0px 0px 22px 0px;
+    border-radius: 15px;
+    transition: .3s;
+}
+
+
+.itemDiv1 {
+    padding: 20px;
+    transform: translateX(-180px);
+}
+
+.itemDiv2 {
+    padding: 20px;
+    margin-left: 20px;
+    transform: translateX(150px);
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    box-shadow: 2px 2px 5px 5px rgb(0, 0, 0);
+    border-radius: 5px;
+    background-image: url("https://thumbs.dreamstime.com/b/metal-y-fondo-medieval-de-madera-22357932.jpg");
+    background-size: cover;
+    opacity: 1;
+    color: rgb(244, 237, 237);
+    font-family: 'Cinzel', serif;
+    font-weight: 500;
+    font-size: 20px;
+
+}
+
+
+.links:hover {
+    opacity: 1;
+    text-decoration: underline;
+    background-color: black;
+    transition: .2s;
+    box-shadow: 0px 0px 7px 7px rgb(255, 255, 255);
+}
+
+.lista {
+    display: flex;
+    flex-direction: row;
+}
+
+@keyframes aparicion {
+    0% {
+        transform: translateY(-1500px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}

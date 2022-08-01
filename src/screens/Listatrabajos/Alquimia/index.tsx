@@ -50,7 +50,9 @@ function Alquimia() {
           </table>
           <div className={styles.creacion}>
             <div className={styles.imagenContainer}>
-              <p className={styles.trabajoContenido}>Útilizando la Olla abrimos el menú de creación. </p>
+              <p className={styles.trabajoContenido}>
+                Útilizando la Olla abrimos <br /> el menú de creación.{' '}
+              </p>
               <img className={styles.img} src={alc1} alt="" />
             </div>
             <div className={styles.imagenContainer}>
