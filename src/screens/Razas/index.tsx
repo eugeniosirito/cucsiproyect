@@ -14,6 +14,7 @@ import verdeD from '../LogIn/assets/verdeD.png';
 import amarillaD from '../LogIn/assets/amarillaD.png';
 import verde from '../LogIn/assets/potverde.jpg';
 import amarilla from '../LogIn/assets/potamarilla.jpg';
+import sinfondo from '../LogIn/assets/elfosinfondo.png';
 
 import styles from './styles.module.scss';
 
@@ -42,7 +43,7 @@ function Razas() {
             </div>
             <div className={styles.cara}>
               <h3 className={styles.nombreCara}>Elfo Oscuro</h3>
-              <img className={styles.imgCara3} src={elfoscuro} />
+              <img className={styles.imgCara3} src={sinfondo} />
             </div>
             <div className={styles.cara}>
               <h3 className={styles.nombreCara}>Gnomo</h3>

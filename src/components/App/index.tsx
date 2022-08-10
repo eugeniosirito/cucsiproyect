@@ -77,6 +77,7 @@ import Mapas from 'screens/Mapas';
 import Items from 'screens/Items';
 import Exp from 'screens/Exp';
 import Clanes from 'screens/Clanes';
+import Test from 'screens/Test';
 
 function App() {
   return (
@@ -157,6 +158,7 @@ function App() {
         <Route path="/manual/items" element={<Items />} />
         <Route path="/manual/exp" element={<Exp />} />
         <Route path="/manual/clanes" element={<Clanes />} />
+        <Route path="/manual/test" element={<Test />} />
       </Routes>
     </Router>
   );

@@ -1,0 +1,160 @@
+.background {
+    background-color: hsla(235, 38%, 87%, 0.79);
+    box-shadow: 0px 0px 22px 0px;
+}
+
+.imgContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin: 80px auto;
+    animation: aparicion 1.5s ease-out;
+}
+
+.className {
+    color: rgb(244, 237, 237);
+    font-family: 'Cinzel', serif;
+    font-size: 42px;
+
+    color: black;
+}
+
+
+.className2 {
+    color: rgb(244, 237, 237);
+    font-family: 'Cinzel', serif;
+    font-size: 42px;
+
+    color: black;
+    transform: translateX(70px);
+}
+
+.className3 {
+    color: rgb(244, 237, 237);
+    font-family: 'Cinzel', serif;
+    font-size: 42px;
+    color: black;
+    transform: translateY(-50px);
+}
+
+.className4 {
+    color: rgb(244, 237, 237);
+    font-family: 'Cinzel', serif;
+    font-size: 42px;
+    color: black;
+    transform: translate(-10px, -50px);
+}
+
+.className5 {
+    color: rgb(244, 237, 237);
+    font-family: 'Cinzel', serif;
+    font-size: 42px;
+    color: black;
+    transform: translate(45px, 17px);
+}
+
+.className6 {
+    color: rgb(244, 237, 237);
+    font-family: 'Cinzel', serif;
+    font-size: 42px;
+    color: black;
+    transform: translate(-10px, -30px);
+}
+
+.className7 {
+    color: rgb(244, 237, 237);
+    font-family: 'Cinzel', serif;
+    font-size: 42px;
+    color: black;
+    transform: translate(50px, 20px);
+}
+
+.className8 {
+    color: rgb(244, 237, 237);
+    font-family: 'Cinzel', serif;
+    font-size: 42px;
+    color: black;
+    transform: translate(-20px);
+}
+
+.className9 {
+    color: rgb(244, 237, 237);
+    font-family: 'Cinzel', serif;
+    font-size: 42px;
+    color: black;
+    transform: translate(40px);
+}
+
+.className10 {
+    color: rgb(244, 237, 237);
+    font-family: 'Cinzel', serif;
+    font-size: 42px;
+    color: black;
+    transform: translate(11px, -40px);
+}
+
+.imgContainer .img {
+    width: 20%;
+}
+
+.imgContainer .img2 {
+    width: 25%;
+    transform: translate(-10px);
+}
+
+.imgContainer .img3 {
+    width: 19%;
+    transform: translate(-90px, -100px);
+
+}
+
+.imgContainer .img4 {
+    width: 20%;
+    transform: translateY(-140px);
+}
+
+.imgContainer .img5 {
+    width: 24%;
+    transform: translate(-20px, -20px);
+}
+
+.imgContainer .img6 {
+    width: 20%;
+    transform: translate(-40px, -60px);
+}
+
+.imgContainer .img7 {
+    width: 31%;
+    transform: translate(-40px, -10px);
+}
+
+.imgContainer .img8 {
+    width: 18%;
+    transform: translate(-20px, -10px);
+}
+
+.imgContainer .img9 {
+    width: 20%;
+    transform: translate(-70px, -50px);
+}
+
+
+.imgContainer .img10 {
+    width: 25%;
+    transform: translate(-90px, -50px);
+}
+
+
+@keyframes aparicion {
+    0% {
+        opacity: 0;
+        ;
+    }
+
+    100% {
+        opacity: 1;
+        ;
+    }
+}

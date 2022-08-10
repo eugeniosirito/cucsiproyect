@@ -159,7 +159,7 @@ function Manual() {
           </Link>
         </div>
         <div className={styles.links}>
-          <Link className={styles.linkName} to="/home">
+          <Link className={styles.linkName} to="/manual/test">
             Reglamento*
           </Link>
         </div>
