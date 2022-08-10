@@ -9,5 +9,7 @@ Site: https://cucsiproyect.netlify.app/
 
 ![image](https://user-images.githubusercontent.com/102197071/184002054-011cfd29-9f30-4668-9ee0-9eb48183bfbd.png)
 
-![image](https://user-images.githubusercontent.com/102197071/184002110-aaa8b7db-3552-4e7d-aaf4-bfd543ea896e.png)
+![image](https://user-images.githubusercontent.com/102197071/184002348-eac574bc-b047-4397-bc93-da8803851347.png)
+
+![image](https://user-images.githubusercontent.com/102197071/184002293-a2700282-0d63-4de0-90e8-6c805336369d.png)
 
